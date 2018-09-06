@@ -1,6 +1,10 @@
 var express = require("express");
 var app     = express();
 
+/*=============================================
+=      Environment Variable Configuration     =
+=============================================*/
+const SERVICE_PORT = process.env.SERVICE_PORT || 8080;
 
 app.use(express.static(__dirname + '/src/'));
 app.use("/js", express.static(__dirname + '/src/js'));
@@ -14,6 +18,6 @@ app.get('/',function(req,res){
  res.sendFile('/index.html');
 });
 
-app.listen(3000);
+app.listen(SERVICE_PORT);
 
-console.log("Running at Port 3000");
+console.log("Running at Port %s", SERVICE_PORT);

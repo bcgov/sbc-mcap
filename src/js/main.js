@@ -1,6 +1,9 @@
 var EXPAND_CLASS = 'expanded';
 var MOBILE_MAX_WIDTH = 767; //px
-var ASSISTJS_URL = 'https://video-poc1.maximusbc.ca/assistserver/sdk/web/consumer/assist.js';
+//var ASSISTJS_URL = 'https://video-poc1.maximusbc.ca/assistserver/sdk/web/consumer/assist.js';
+console.log("serverConfig.AssistJSUrl:%s ",serverConfig.AssistJSUrl);
+var ASSISTJS_URL = serverConfig.AssistJSUrl ;
+
 
 
 $(document).ready(function(event) {
@@ -8,6 +11,8 @@ $(document).ready(function(event) {
     //Remove all Live-Assist sessions. Can't restore sessions, but no bugs from
     //failed restorations.
     clearAllStorageData();
+
+
 
     //Co-Browse Setup -----
     addScript(ASSISTJS_URL)

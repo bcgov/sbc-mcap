@@ -5,15 +5,15 @@ console.log("serverConfig.AssistJSUrl:%s ",serverConfig.AssistJSUrl);
 var ASSISTJS_URL = serverConfig.AssistJSUrl ;
 
 
-
 $(document).ready(function(event) {
 
     //Remove all Live-Assist sessions. Can't restore sessions, but no bugs from
     //failed restorations.
     clearAllStorageData();
 
-
-
+    console.log('serverConfig.ChatServicesUrl:'+serverConfig.ChatServicesUrl);
+    //  action="http://devchatservices.maximusbc.ca/Home/Chat"
+    $(".chatpopup").attr('action', serverConfig.ChatServicesUrl  );
     //Co-Browse Setup -----
     addScript(ASSISTJS_URL)
     .done(initCobrowse)
@@ -169,6 +169,9 @@ function clearAllStorageData(){
     }
 }
 
+function openChatPopup () {
+    return "ssssadfasfasd.com";
+}
 // function enableCoBrowseUI(){
 
 // }

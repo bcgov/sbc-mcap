@@ -20,7 +20,8 @@ app.use(express.static(__dirname + '/config'))
 //
 var configObj = {
     AssistJSUrl: process.env.ASSISTJS_URL,
-    videoAssistUrl: process.env.VIDEO_ASSIST_URL
+    videoAssistUrl: process.env.VIDEO_ASSIST_URL,
+    ChatServicesUrl : process.env.CHAT_SERVICES_URL
 };
 
 fs.writeFileSync(

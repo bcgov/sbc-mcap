@@ -169,9 +169,6 @@ function clearAllStorageData(){
     }
 }
 
-function openChatPopup () {
-    return "ssssadfasfasd.com";
-}
 // function enableCoBrowseUI(){
 
 // }

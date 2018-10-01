@@ -85,6 +85,10 @@
                   {
                     "name": "VIDEO_ASSIST_URL",
                     "value": "${VIDEO_ASSIST_URL}"
+                  },
+                  {
+                    "name": "AGENT_ID",
+                    "value": "${AGENT_ID}"
                   }
                 ],
                 "resources": {
@@ -248,6 +252,13 @@
       "description": "URL for Video Assist",
       "displayName": "VIDEO_ASSIST_URL",
       "name": "VIDEO_ASSIST_URL",
+      "required": true,
+      "value": ""
+    },
+    {
+      "description": "AgentID for the remote session",
+      "displayName": "AGENT_ID",
+      "name": "AGENT_ID",
       "required": true,
       "value": ""
     }

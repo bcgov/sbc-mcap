@@ -266,8 +266,8 @@ function assistConfig() {
 
                 // console.log("Assist Calling agent: agent1");
                 // settings.destination = 'agent1';
-                console.log('Assist calling default agent: sip:7783727966@aaa.qaz');
-                settings.destination = 'sip:7783727966@aaa.qaz';
+                console.log('Assist calling default agent: agent1');
+                settings.destination = 'agent1';
             }
         }
 

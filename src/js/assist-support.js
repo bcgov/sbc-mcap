@@ -266,8 +266,9 @@ function assistConfig() {
 
                 // console.log("Assist Calling agent: agent1");
                 // settings.destination = 'agent1';
-                console.log('Assist calling default agent: agent1');
-                settings.destination = 'agent1';
+                var agentId = serverConfig.agentId;
+                console.log('Assist calling default agent: ' + agentId);
+                settings.destination = agentId;
             }
         }
 

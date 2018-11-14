@@ -441,7 +441,7 @@ window.AssistSDK = {
         }
         banner = null;
         console.log("Co-browsing is inactive");
-      
+
     }
 
 };

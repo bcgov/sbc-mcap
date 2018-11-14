@@ -25,7 +25,7 @@ $(document).ready(function(event) {
         processData: false });
 
     request.done(function( msg ) {
-        if (msg.SPA_ENV_MCAP_MAINTENANCE_FLAG == 's') {
+        if (msg.SPA_ENV_MCAP_MAINTENANCE_FLAG == 'true') {
             $("div#pagecontentid").hide();
             $("div#maintenance").show();
             $("#maintNotice").text( msg.SPA_ENV_MCAP_MAINTENANCE_MESSAGE );

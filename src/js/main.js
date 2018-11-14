@@ -54,7 +54,7 @@ $(document).ready(function(event) {
 function initAll() {
     //Remove all Live-Assist sessions. Can't restore sessions, but no bugs from
     //failed restorations.
-    clearAllStorageData();
+   // clearAllStorageData();
 
     console.log('ChatServicesUrl:'+chatServicesUrl);
     //  action="http://devchatservices.maximusbc.ca/Home/Chat"
@@ -87,7 +87,7 @@ function initAll() {
 }
 
 function initCobrowse(){
-    console.log('initCobrowse called');
+       console.log('initCobrowse called');
     AssistBoot.addAssistBehaviour();
     $('.js-cobrowse').on('click', AssistBoot.startAssistDialog);
 }

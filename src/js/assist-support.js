@@ -18,7 +18,8 @@ window.AssistBoot = {
     startAssistDialog: function startAssistDialog() {
 
         if(activeSession) {
-            // window.alert("A support call is already active");
+             window.alert("A support call is already active");
+             return ;
             //This is effectively copied from supportEnded() but without deleting the method.
             //TODO: TEST! Removed the alert() and replaced with hopefully fixing the error.
             removeEndSupportGui();
@@ -29,7 +30,7 @@ window.AssistBoot = {
         }
 
         config = assistConfig();
-    console.log('videoAssistUrl'+ window.videoAssistUrl);
+         console.log('videoAssistUrl'+ window.videoAssistUrl);
       //  config.url = 'https://video-poc1.maximusbc.ca';
         config.url =  window.videoAssistUrl;
         config.sdkPath = config.url + "/assistserver/sdk/web/consumer"
@@ -53,10 +54,6 @@ window.AssistBoot = {
             // or to use Short Code Assist.
             $('#assist-modal-help').modal();
         }
-
-
-
-
     },
 
     /**
@@ -345,10 +342,22 @@ var dismissCidDisplay = function(){};
 var inSupport = false;
 window.AssistSDK = {
 
+    /*onAgentJoinedSession :function() {
+        alert("onAgentJoinedSession")
+    },*/
+   /* onAgentJoinedCobrowse :function() {
+        alert("Agent Joined Co Browse");
+    },*/
+    /*onAgentLeftCobrowse :function() {
+        alert("This Session is now closed");
+    },*/
+    /*onAgentLeftSession :function() {
+        alert("onAgentLeftSession")
+    },*/
     onConnectionEstablished : function() {
         activeSession = true;
         console.log("on connection established called");
-
+       // alert("on connection established called");
         localStorage.removeItem("cid-only");
 
         if (config.cobrowseOnly == true) {
@@ -418,6 +427,10 @@ window.AssistSDK = {
         banner = document.createElement("div");
         banner.id = "default-cobrowsing";
         banner.className = "default-cobrowsing";
+
+        var message = "This page is currently being shared";
+        banner.appendChild(document.createTextNode(message));
+
         document.body.appendChild(banner);
         console.log("Co-browsing is active");
     },
@@ -428,6 +441,7 @@ window.AssistSDK = {
         }
         banner = null;
         console.log("Co-browsing is inactive");
+      
     }
 
 };

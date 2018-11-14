@@ -1,1 +1,1 @@
-var serverConfig = {"AssistJSUrl":"https://video-poc1.maximusbc.ca/assistserver/sdk/web/consumer/assist.js","videoAssistUrl":"https://video-poc1.maximusbc.ca","ChatServicesUrl":"http://devchatservices.maximusbc.ca/Home/Chat", "agentId":"sip:2504100784@aaa.qaz"}
+var serverConfig = {"spaEnvServerURL":"https://spa-env-server-dev.pathfinder.gov.bc.ca/env","authorizationToken":"spaenv 5993117a-2384-4b70-ad42-1e9b9e6044d9"}

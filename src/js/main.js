@@ -2,22 +2,68 @@ var EXPAND_CLASS = 'expanded';
 var MOBILE_MAX_WIDTH = 767; //px
 //var ASSISTJS_URL = 'https://video-poc1.maximusbc.ca/assistserver/sdk/web/consumer/assist.js';
 console.log("serverConfig.AssistJSUrl:%s ",serverConfig.AssistJSUrl);
-var ASSISTJS_URL = serverConfig.AssistJSUrl ;
+var assistjs_url = serverConfig.AssistJSUrl ;
+var chatServicesUrl = serverConfig.ChatServicesUrl ;
 
+var envVars = {"SPA_ENV_MCAP_MAINTENANCE_FLAG":"","SPA_ENV_MCAP_MAINTENANCE_MESSAGE":"",
+                    "SPA_ENV_MCAP_ASSISTJS_URL":"","SPA_ENV_MCAP_VIDEO_ASSIST_URL":"",
+                    "SPA_ENV_MCAP_CHAT_SERVICES_URL":"","SPA_ENV_MCAP_AGENT_ID":""};
+
+window.agentIdVar = serverConfig.agentId;
+window.videoAssistUrl = serverConfig.videoAssistUrl;
 
 $(document).ready(function(event) {
+    $("div#maintenance").hide();
 
+    var request =  $.ajax({
+        type: "POST",
+        beforeSend: function(request) {
+            request.setRequestHeader("Authorization", serverConfig.authorizationToken );
+            request.setRequestHeader("SPA_ENV_NAME", JSON.stringify(envVars));
+        },
+        url: serverConfig.spaEnvServerURL ,
+        processData: false });
+
+    request.done(function( msg ) {
+        if (msg.SPA_ENV_MCAP_MAINTENANCE_FLAG == 's') {
+            $("div#pagecontentid").hide();
+            $("div#maintenance").show();
+            $("#maintNotice").text( msg.SPA_ENV_MCAP_MAINTENANCE_MESSAGE );
+        } else {
+            assistjs_url = msg.SPA_ENV_MCAP_ASSISTJS_URL;
+            chatServicesUrl = msg.SPA_ENV_MCAP_CHAT_SERVICES_URL;
+            window.agentIdVar  = msg.SPA_ENV_MCAP_AGENT_ID;
+            window.videoAssistUrl = msg.SPA_ENV_MCAP_VIDEO_ASSIST_URL ;
+            console.log('agent ID:'+window.agentIdVar +"----assist js url-------"+assistjs_url + '--chatServicesUrl:'+chatServicesUrl+'-- videoAssistUrl:'+ window.videoAssistUrl);
+            $("div#maintenance").hide();
+            $("div#pagecontentid").show();
+            initAll() ;
+        }
+
+    });
+
+    request.fail(function( jqXHR, textStatus ) {
+        console.log( "Request failed: " + textStatus );
+        console.log( "default values are assigned: " );
+    });
+
+
+
+});
+
+function initAll() {
     //Remove all Live-Assist sessions. Can't restore sessions, but no bugs from
     //failed restorations.
     clearAllStorageData();
 
-    console.log('serverConfig.ChatServicesUrl:'+serverConfig.ChatServicesUrl);
+    console.log('ChatServicesUrl:'+chatServicesUrl);
     //  action="http://devchatservices.maximusbc.ca/Home/Chat"
-    $(".chatpopup").attr('action', serverConfig.ChatServicesUrl  );
+    $(".chatpopup").attr('action', chatServicesUrl  );
     //Co-Browse Setup -----
-    addScript(ASSISTJS_URL)
-    .done(initCobrowse)
-    .fail(onCobrowseFailToLoad);
+    console.log('assistjs_url---'+assistjs_url);
+    addScript(assistjs_url)
+        .done(initCobrowse)
+        .fail(onCobrowseFailToLoad);
 
     $('#main-content .collapse').on('show.bs.collapse', onExpandSection)
 
@@ -37,7 +83,8 @@ $(document).ready(function(event) {
 
     //FIXME: use addScript() to load typeahead script, keeps first page load quicker.
     initTypeahead();
-});
+
+}
 
 function initCobrowse(){
     console.log('initCobrowse called');
@@ -46,9 +93,9 @@ function initCobrowse(){
 }
 
 function onCobrowseFailToLoad(){
-    console.error("Network error, unable to load assist.js", ASSISTJS_URL);
+    console.error("Network error, unable to load assist.js", assistjs_url);
     $('.js-cobrowse').on('click', function(){
-        alert("Network error: Unable to load assist.js from " + ASSISTJS_URL);
+        alert("Network error: Unable to load assist.js from " + assistjs_url);
     });
 }
 

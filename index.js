@@ -19,10 +19,12 @@ app.use(express.static(__dirname + '/config'))
 // used for externalising the urls and supplying them to client
 //
 var configObj = {
-    AssistJSUrl: process.env.ASSISTJS_URL,
+   AssistJSUrl: process.env.ASSISTJS_URL,
     videoAssistUrl: process.env.VIDEO_ASSIST_URL,
     ChatServicesUrl : process.env.CHAT_SERVICES_URL,
-    agentId : process.env.AGENT_ID
+    agentId : process.env.AGENT_ID,
+    spaEnvServerURL: process.env.SPA_ENV_SERVER_URL,
+    authorizationToken:'spaenv 5993117a-2384-4b70-ad42-1e9b9e6044d9'
 };
 
 fs.writeFileSync(

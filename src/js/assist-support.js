@@ -29,9 +29,9 @@ window.AssistBoot = {
         }
 
         config = assistConfig();
-    console.log('videoAssistUrl'+serverConfig.videoAssistUrl);
+    console.log('videoAssistUrl'+ window.videoAssistUrl);
       //  config.url = 'https://video-poc1.maximusbc.ca';
-        config.url = serverConfig.videoAssistUrl;
+        config.url =  window.videoAssistUrl;
         config.sdkPath = config.url + "/assistserver/sdk/web/consumer"
 
         if (config.cobrowseOnly && config.correlationId) {
@@ -263,10 +263,10 @@ function assistConfig() {
                 settings.destination = QueryString.agent;
             } else {
                 //TODO: TRY WITH AGENT1 AGAIN TO SEE IF HANGING BUG PERSISTS! THERE IS SOME POTENTIAL ISSUES WITH THE SIP ADDR.
-
+                console.log('agentid in window scope:'+window.agentIdVar );
                 // console.log("Assist Calling agent: agent1");
                 // settings.destination = 'agent1';
-                var agentId = serverConfig.agentId;
+                var agentId = window.agentIdVar ;
                 console.log('Assist calling default agent: ' + agentId);
                 settings.destination = agentId;
             }

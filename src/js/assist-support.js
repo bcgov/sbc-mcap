@@ -440,7 +440,7 @@ window.AssistSDK = {
             document.body.removeChild(banner);
         }
         banner = null;
-        console.log("Co-browsing is inactive");
+        alert("Co-browsing is inactive or ended");
 
     }
 

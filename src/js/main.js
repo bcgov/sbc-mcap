@@ -57,7 +57,6 @@ function initAll() {
    // clearAllStorageData();
 
     console.log('ChatServicesUrl:'+chatServicesUrl);
-      chatServicesUrl="http://testchatservices.maximusbc.ca/Home/Chat"
     $(".chatpopup").attr('action', chatServicesUrl  );
     //Co-Browse Setup -----
     console.log('assistjs_url---'+assistjs_url);

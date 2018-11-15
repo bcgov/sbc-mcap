@@ -25,7 +25,7 @@ $(document).ready(function(event) {
         processData: false });
 
     request.done(function( msg ) {
-        if (msg.SPA_ENV_MCAP_MAINTENANCE_FLAG == 'true') {
+        if (msg.SPA_ENV_MCAP_MAINTENANCE_FLAG == 'truet') {
             $("div#pagecontentid").hide();
             $("div#maintenance").show();
             $("#maintNotice").text( msg.SPA_ENV_MCAP_MAINTENANCE_MESSAGE );
@@ -57,7 +57,7 @@ function initAll() {
    // clearAllStorageData();
 
     console.log('ChatServicesUrl:'+chatServicesUrl);
-    //  action="http://devchatservices.maximusbc.ca/Home/Chat"
+      chatServicesUrl="http://testchatservices.maximusbc.ca/Home/Chat"
     $(".chatpopup").attr('action', chatServicesUrl  );
     //Co-Browse Setup -----
     console.log('assistjs_url---'+assistjs_url);

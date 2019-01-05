@@ -24,7 +24,8 @@ var configObj = {
     ChatServicesUrl : process.env.CHAT_SERVICES_URL,
     agentId : process.env.AGENT_ID,
     spaEnvServerURL: process.env.SPA_ENV_SERVER_URL,
-    authorizationToken:'spaenv 5993117a-2384-4b70-ad42-1e9b9e6044d9'
+    // authorizationToken:'spaenv 5993117a-2384-4b70-ad42-1e9b9e6044d9'
+    authorizationToken: 'spaenv ' + process.env.SPA_ENV_AUTH_TOKEN
 };
 
 fs.writeFileSync(

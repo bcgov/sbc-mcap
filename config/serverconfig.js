@@ -1,1 +1,1 @@
-var serverConfig = {"spaEnvServerURL":"https://spa-env-server-dev.pathfinder.gov.bc.ca/env","authorizationToken":"spaenv 5993117a-2384-4b70-ad42-1e9b9e6044d9"}
+var serverConfig = {"spaEnvServerURL":"https://spa-env-server-prod.pathfinder.gov.bc.ca/env","authorizationToken":"spaenv 02eb4386-4b2b-413e-9805-36294e774bce"}

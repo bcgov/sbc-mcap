@@ -87,7 +87,7 @@ function initAll() {
 
 function initCobrowse(){
        console.log('initCobrowse called');
-       var showModal = false;
+    var showModal = true;
     AssistBoot.addAssistBehaviour(showModal);
     $('.js-cobrowse').on('click', AssistBoot.startAssistDialog);
 }

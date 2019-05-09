@@ -75,8 +75,8 @@ window.AssistBoot = {
          * Place a call to an Agent, cobrowsing can happen after the call is established.
          */
         document.getElementById('help-call-and-share').addEventListener('click', function () {
-            $('#assist-modal-help').modal('hide')
-
+           
+           
             config.allowedIframeOrigins = false; // important: disable iframe messaging if not required for security
             if (AssistSDK.isBrowserSupported()) {
                 AssistSDK.startSupport(config);

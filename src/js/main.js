@@ -86,9 +86,8 @@ function initAll() {
 }
 
 function initCobrowse(){
-       console.log('initCobrowse called');
-    var showModal = true;
-    AssistBoot.addAssistBehaviour(showModal);
+    console.log('initCobrowse called');
+    AssistBoot.addAssistBehaviour();
     $('.js-cobrowse').on('click', AssistBoot.startAssistDialog);
 }
 

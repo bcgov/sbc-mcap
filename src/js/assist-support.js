@@ -34,7 +34,11 @@ window.AssistBoot = {
       //  config.url = 'https://video-poc1.maximusbc.ca';
         config.url =  window.videoAssistUrl;
         config.sdkPath = config.url + "/assistserver/sdk/web/consumer"
+        var url = window.location.href;
+        console.log(url.replace('index','video-chat')); 
 
+        window.location.href = url.replace('index','video-chat'); 
+    
         if (config.cobrowseOnly && config.correlationId) {
             // Both the cobrowseOnly and cid URL parameters have been specified.
             // Start support immediately.
@@ -59,16 +63,11 @@ window.AssistBoot = {
     /**
      * Add start assists models and all the associated behaviour.
      */
-    addAssistBehaviour: function addAssistBehaviour(showVideoModal) {
+    addAssistBehaviour: function addAssistBehaviour() {
         delete AssistSDK.onScreenshareRequest;
 
         //document.body.appendChild(getHelpModal());
-        if(showVideoModal) {
-            document.body.appendChild(getHelpModal());
-        } else {
-            window.location.href= '/video-chat.html';  
-        }
-              
+        document.body.appendChild(getHelpModal());
         document.body.appendChild(getShortCodeModal());
 
         /**
@@ -76,8 +75,15 @@ window.AssistBoot = {
          */
         document.getElementById('help-call-and-share').addEventListener('click', function () {
            
-           
-            config.allowedIframeOrigins = false; // important: disable iframe messaging if not required for security
+           console.log(config);
+           config = assistConfig();
+           console.log('videoAssistUrl'+ window.videoAssistUrl);
+           config.url = 'https://t1cafex.maximusbc.ca';
+          config.url =  window.videoAssistUrl;
+          config.sdkPath = config.url + "/assistserver/sdk/web/consumer"
+          console.log(config);
+
+           // config.allowedIframeOrigins = false; // important: disable iframe messaging if not required for security
             if (AssistSDK.isBrowserSupported()) {
                 AssistSDK.startSupport(config);
             } else {
@@ -92,6 +98,14 @@ window.AssistBoot = {
          *  generated code to the Agent. The modal is defined
          */
         document.getElementById('help-want-to-share').addEventListener('click', function () {
+            console.log(config);
+            config = assistConfig();
+            console.log('videoAssistUrl'+ window.videoAssistUrl);
+            config.url = 'https://t1cafex.maximusbc.ca';
+           config.url =  window.videoAssistUrl;
+           config.sdkPath = config.url + "/assistserver/sdk/web/consumer"
+           console.log(config);
+ 
             config.cobrowseOnly = true;
 
             if (config.destination) {
@@ -300,8 +314,7 @@ function assistConfig() {
             settings.shadowCursor = false;
         } else {
             console.log("Shadow consumer mouse cursor to agent.");
-        }
-
+        }      
         if (QueryString.shadowCursorDelay) {
             console.log("Send agent consumer mouse position every " + QueryString.shadowCursorDelay + " ms.");
             settings.shadowCursorDelay = QueryString.shadowCursorDelay;

@@ -1,16 +1,16 @@
 var EXPAND_CLASS = 'expanded';
 var MOBILE_MAX_WIDTH = 767; //px
 //var ASSISTJS_URL = 'https://video-poc1.maximusbc.ca/assistserver/sdk/web/consumer/assist.js';
-//console.log("serverConfig.AssistJSUrl:%s ",serverConfig.AssistJSUrl);
-var assistjs_url ='https://t1cafex.maximusbc.ca/assistserver/sdk/web/consumer/assist.js';// 'https://video-poc1.maximusbc.ca/assistserver/sdk/web/consumer/assist.js'; //serverConfig.AssistJSUrl ;
-var chatServicesUrl = 'https://testchatservices.maximusbc.ca/Home/Chat';//'http://chatservices.maximusbc.ca/Home/Chat'; //serverConfig.ChatServicesUrl ;
+console.log("serverConfig.AssistJSUrl:%s ",serverConfig.AssistJSUrl);
+var assistjs_url = serverConfig.AssistJSUrl ;
+var chatServicesUrl = serverConfig.ChatServicesUrl ;
 
 var envVars = {"SPA_ENV_MCAP_MAINTENANCE_FLAG":"","SPA_ENV_MCAP_MAINTENANCE_MESSAGE":"",
                     "SPA_ENV_MCAP_ASSISTJS_URL":"","SPA_ENV_MCAP_VIDEO_ASSIST_URL":"",
                     "SPA_ENV_MCAP_CHAT_SERVICES_URL":"","SPA_ENV_MCAP_AGENT_ID":""};
 
-window.agentIdVar = 'sip:7783727966@aaa.qaz'; //serverConfig.agentId;
-window.videoAssistUrl = 'https://t1cafex.maximusbc.ca';//'https://video-poc1.maximusbc.ca';// serverConfig.videoAssistUrl;
+window.agentIdVar = serverConfig.agentId;
+window.videoAssistUrl = serverConfig.videoAssistUrl;
 
 $(document).ready(function(event) {
     $("div#maintenance").hide();
@@ -18,10 +18,10 @@ $(document).ready(function(event) {
     var request =  $.ajax({
         type: "POST",
         beforeSend: function(request) {
-            request.setRequestHeader("Authorization", 'spaenv 5993117a-2384-4b70-ad42-1e9b9e6044d9' );
+            request.setRequestHeader("Authorization", serverConfig.authorizationToken );
             request.setRequestHeader("SPA_ENV_NAME", JSON.stringify(envVars));
         },
-        url: 'https://spa-env-server-dev.pathfinder.gov.bc.ca/env',//serverConfig.spaEnvServerURL ,
+        url: serverConfig.spaEnvServerURL ,
         processData: false });
 
     request.done(function( msg ) {
@@ -55,6 +55,7 @@ function initAll() {
     //Remove all Live-Assist sessions. Can't restore sessions, but no bugs from
     //failed restorations.
    // clearAllStorageData();
+
     console.log('ChatServicesUrl:'+chatServicesUrl);
     $(".chatpopup").attr('action', chatServicesUrl  );
     //Co-Browse Setup -----
@@ -86,8 +87,8 @@ function initAll() {
 
 function initCobrowse(){
        console.log('initCobrowse called');
-       var showVideoModal = false;
-    AssistBoot.addAssistBehaviour(showVideoModal);
+       var showModal = false;
+    AssistBoot.addAssistBehaviour(showModal);
     $('.js-cobrowse').on('click', AssistBoot.startAssistDialog);
 }
 

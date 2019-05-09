@@ -35,9 +35,8 @@ window.AssistBoot = {
         config.url =  window.videoAssistUrl;
         config.sdkPath = config.url + "/assistserver/sdk/web/consumer"
         var url = window.location.href;
-        console.log(url); 
-
-        window.location.href =  url+'/video-chat.html';
+       
+        window.location.href =  url+'video-chat.html';
 
         if (config.cobrowseOnly && config.correlationId) {
             // Both the cobrowseOnly and cid URL parameters have been specified.

@@ -59,10 +59,16 @@ window.AssistBoot = {
     /**
      * Add start assists models and all the associated behaviour.
      */
-    addAssistBehaviour: function addAssistBehaviour() {
+    addAssistBehaviour: function addAssistBehaviour(showVideoModal) {
         delete AssistSDK.onScreenshareRequest;
 
-        document.body.appendChild(getHelpModal());
+        //document.body.appendChild(getHelpModal());
+        if(showVideoModal) {
+            document.body.appendChild(getHelpModal());
+        } else {
+            window.location.href= '/video-chat.html';  
+        }
+              
         document.body.appendChild(getShortCodeModal());
 
         /**

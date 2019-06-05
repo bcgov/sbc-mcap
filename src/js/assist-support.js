@@ -34,9 +34,11 @@ window.AssistBoot = {
       //  config.url = 'https://video-poc1.maximusbc.ca';
         config.url =  window.videoAssistUrl;
         config.sdkPath = config.url + "/assistserver/sdk/web/consumer"
-        var url = window.location.href;
-       
-        window.location.href =  url+'video-chat.html';
+        //var url = window.location.href;
+        //console.log(url.replace('index','video-chat')); 
+         
+        // DOn't checkin the below line 
+        //window.location.href = url.replace('index','video-chat'); // url+'/video-chat.html';
 
         if (config.cobrowseOnly && config.correlationId) {
             // Both the cobrowseOnly and cid URL parameters have been specified.

@@ -45,10 +45,8 @@ $(document).ready(function(event) {
     request.fail(function( jqXHR, textStatus ) {
         console.log( "Request failed: " + textStatus );
         console.log( "default values are assigned: " );
+        initAll() ;
     });
-
-
-
 });
 
 function initAll() {

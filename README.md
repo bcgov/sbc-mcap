@@ -10,7 +10,12 @@ Import below scripts in your html.
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/assist-support.js"></script>    
     <script src="js/main.js"></script>
-	
+
+Library Paths
+
+* src\js\assist-support.js
+* src\js\main.js
+
 ## Step 2
 	
 In the main.js file, setup the urls for the serverConfig variable in beginning of the script. 

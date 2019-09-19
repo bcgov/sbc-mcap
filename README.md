@@ -27,7 +27,7 @@ In the main.js file, setup the urls for the serverConfig variable in beginning o
       "videoAssistUrl":"https://t1cafex.maximusbc.ca"
     }
 	
-## Setup a Chat Button. 
+## Setup a Chat Button
 
 Goto the main.js file and add you button class at line#58 or in your button click event make sure the action attribute is set to ChatServiceUrl
 	
@@ -48,7 +48,7 @@ main.js
 	
     $(".chatpopup").attr('action', chatServicesUrl);
 	
-## Setup a Video Button, 
+## Setup a Video Button
 
 Goto assist-support.js and add your button Id at line 77.  
 	

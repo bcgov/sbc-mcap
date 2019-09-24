@@ -63,3 +63,30 @@ Example HTML
 In assist-support.js, addAssistBehaviour method, at Line 77 add the button id.
 	
     document.getElementById('videoChatBtn').addEventListener('click', function () 
+
+## Hours of Operations - Web Chat
+
+In your application you would want to disable web chat operations outside of the hours of operations, both daily and on holidays.
+
+There exists a simple REST api to obtain this information.  Before allowing your web chat function, you will need to make a GET REST call to get the status of the availabity of web chat through our server.
+
+The endpoint of the HTTP GET call and its format is:
+
+    http://[WebChatHost].maximusbchealth.local:91/api/skill/status/[WebChatToken]
+    
+Please contact HIBC to obtain the WebChatHost and WebChatToken values.
+
+If the REST call is successful, you will receive an HTTP status of 200, along with the following JSON payload (if during business hours):
+
+    {"status":"open"}
+    
+Outside of business hours, you will receive:
+
+    {"status":"closed"}
+
+If you cannot connect to the server, the HTTP status will indicate the error number instead of 200.
+
+## Hours of Operations - CoBrowse
+
+Since CoBrowse requires you to be on the call first, you will not need any additional programming for hours of operations.  The voice call will let you know if you are calling outside of business hours.
+

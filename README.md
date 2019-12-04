@@ -1,5 +1,5 @@
 # moh-mcap
-BC Ministry of Health Multi-Channel Access Page.
+ServiceBC Multi-Channel Access Page.
 
 # Setup the environment
 

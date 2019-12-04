@@ -1,4 +1,4 @@
-# moh-mcap
+# sbc-mcap
 ServiceBC Multi-Channel Access Page.
 
 # Setup the environment

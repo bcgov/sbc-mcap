@@ -6,7 +6,7 @@ const fs = require('fs')
 =============================================*/
 const SERVICE_PORT = process.env.SERVICE_PORT || 8080;
 
-app.use(express.static(__dirname + '/src/'));
+app.use("/", express.static(__dirname + '/src/'));
 app.use("/js", express.static(__dirname + '/src/js'));
 app.use("/css", express.static(__dirname + '/src/css'));
 app.use("/fonts", express.static(__dirname + '/src/fonts'));
@@ -24,7 +24,6 @@ var configObj = {
     ChatServicesUrl : process.env.CHAT_SERVICES_URL,
     agentId : process.env.AGENT_ID,
     spaEnvServerURL: process.env.SPA_ENV_SERVER_URL,
-    // authorizationToken:'spaenv 5993117a-2384-4b70-ad42-1e9b9e6044d9'
     authorizationToken: 'spaenv ' + process.env.SPA_ENV_AUTH_TOKEN
 };
 
@@ -35,6 +34,10 @@ app.get('/', function (req, res) {
     res.sendFile('/index.html');
 });
 
+app.get('/webchat', function (req, res) {
+    res.sendFile('/webchat.html', { root: __dirname + '/src/'});
+});
+
 app.listen(SERVICE_PORT);
 
-console.log("Running at Port %s", SERVICE_PORT);
+console.log("Running on Port %s", SERVICE_PORT);

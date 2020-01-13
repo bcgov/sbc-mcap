@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+
+  <style>
+    div {
+      width: 500px;
+      margin: 50px;
+    }
+
+    h2 {
+      font: 240 40px/1.5 Helvetica, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+      border-bottom: 1px solid #ccc;
+    }
+
+    li:last-child {
+      border: none;
+    }
+
+    li a {
+      text-decoration: none;
+      color: #000;
+      display: block;
+      width: 500px;
+
+      -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+      -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+      -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+      -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+      transition: font-size 0.3s ease, background-color 0.3s ease;
+    }
+
+    li a:hover {
+      font-size: 22px;
+      background: #f6f6f6;
+    }
+
+    pre {
+      font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+      margin-bottom: 10px;
+      overflow: auto;
+      width: auto;
+      padding: 5px;
+      background-color: #eee;
+      width: 650px;
+      padding-bottom: 10px;
+      max-height: 600px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h2>WebChat Test</h2>
+
+    <ul>
+      <li>
+        <a href="#"
+          onclick="window.open('webchat', 'webchat', 'width=400,height=500');">
+          Click for WebChat Popup
+        </a>
+        <pre><code>&lt;a href="#" 
+onclick="window.open('https://[webchat-url]',
+'webchat', 'width=400,height=500');"&gt;
+Click here for WebChat Popup&lt;a&gt;</code></pre>
+      </li>
+
+      <li>
+        <a href="webchat">Click for WebChat Page</a>
+        <pre><code>&lt;a href="https://[webchat-url]"&gt;
+Click here for WebChat Page&lt;a&gt;</code></pre>
+      </li>
+    </ul>
+  </div>
+
+</body>

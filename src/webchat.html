@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="serverconfig.js"></script>
+	<script type="text/javascript">
+		window.onload = function () {
+			console.log(serverConfig.ChatServicesUrl);
+			document.getElementById("webchat").action = serverConfig.ChatServicesUrl;
+			window.open('about:blank', 'webchat', 'width=400,height=500');
+			document.getElementById("webchat").submit();
+		}
+	</script>
+</head>
+
+<body>
+	Loading WebChat ...
+	<form id=webchat target="webchat" method="post" action="#">
+		<input type="hidden" id="Reason" name="Reason" class="form-control" value="SBC_WebChat">
+		<input type="hidden" name="UserLanguage" value="en">
+		<input type="hidden" name="Parameters[TimeZoneOffset]" value="8">
+	</form>
+</body>
+
+<!-- action="http://vs-uccw-019.maximusbchealth.local:84/Home/Chat" PROD -->
+<!-- action="http://vs-uccl-025.maximusbchealth.local:84/Home/Chat" TEST-->
+<!-- action="http://vs-uccd-116.maximusbchealth.local:84/Home/Chat" NEW DEV (not setup yet-->
+<!-- action="http://vs-uccd-013.maximusbchealth.local:84/Home/Chat" OLD DEV (not really setup)-->

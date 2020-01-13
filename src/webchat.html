@@ -8,15 +8,17 @@
 		window.onload = function () {
 			console.log(serverConfig.ChatServicesUrl);
 			document.getElementById("webchat").action = serverConfig.ChatServicesUrl;
-			window.open('about:blank', 'webchat', 'width=400,height=500');
 			document.getElementById("webchat").submit();
 		}
 	</script>
 </head>
 
 <body>
-	Loading WebChat ...
-	<form id=webchat target="webchat" method="post" action="#">
+	<iframe width=400, height=500 frameborder="2" id="ichat" name="chatFrame" scrolling="no" style="overflow:hidden">
+
+	</iframe>
+
+	<form id=webchat target="chatFrame" method="post" action="#">
 		<input type="hidden" id="Reason" name="Reason" class="form-control" value="SBC_WebChat">
 		<input type="hidden" name="UserLanguage" value="en">
 		<input type="hidden" name="Parameters[TimeZoneOffset]" value="8">

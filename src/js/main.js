@@ -13,13 +13,13 @@ var envVars = {
 window.agentIdVar = serverConfig.agentId;
 window.videoAssistUrl = serverConfig.videoAssistUrl;
 
-$(function (event) {
+$(function () {
     $("div#maintenance").hide();
 
+    console.log("Config Server: " + serverConfig.spaEnvServerURL);
     if (serverConfig.spaEnvServerURL)
         readEnvironment();
-    else
-        initAll();
+    initAll();
 });
 
 function readEnvironment() {
@@ -36,25 +36,30 @@ function readEnvironment() {
     });
 
     request.done(function (msg) {
+        console.log("Maintenance: " + msg.SPA_ENV_MCAP_MAINTENANCE_FLAG);
+        console.log("Chat services: " + msg.SPA_ENV_MCAP_CHAT_SERVICES_URL);
+
+        // If NOT in maintenance mode
         if (msg.SPA_ENV_MCAP_MAINTENANCE_FLAG == 'true') {
             $("div#pagecontentid").hide();
             $("div#maintenance").show();
             $("#maintNotice").text(msg.SPA_ENV_MCAP_MAINTENANCE_MESSAGE);
+        }
+        else {
             assistjs_url = msg.SPA_ENV_MCAP_ASSISTJS_URL;
             chatServicesUrl = msg.SPA_ENV_MCAP_CHAT_SERVICES_URL;
             window.agentIdVar = msg.SPA_ENV_MCAP_AGENT_ID;
             window.videoAssistUrl = msg.SPA_ENV_MCAP_VIDEO_ASSIST_URL;
-            console.log('agent ID:' + window.agentIdVar + "----assist js url-------" + assistjs_url + '--chatServicesUrl:' + chatServicesUrl + '-- videoAssistUrl:' + window.videoAssistUrl);
+
+            // console.log('agent ID:' + window.agentIdVar + "----assist js url-------" + assistjs_url + '--chatServicesUrl:' + chatServicesUrl + '-- videoAssistUrl:' + window.videoAssistUrl);
             $("div#maintenance").hide();
             $("div#pagecontentid").show();
-            initAll();
         }
     });
 
     request.fail(function (jqXHR, textStatus) {
         console.log("Request failed: " + textStatus);
         console.log("default values are assigned: ");
-        initAll();
     });
 }
 
@@ -65,6 +70,7 @@ function initAll() {
     // clearAllStorageData();
 
     console.log('ChatServicesUrl:' + chatServicesUrl);
+    
     $(".chatpopup").attr('action', chatServicesUrl);
     //Co-Browse Setup -----
     console.log('assistjs_url---' + assistjs_url);

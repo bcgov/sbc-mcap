@@ -11,13 +11,22 @@
 			document.getElementById("webchat").submit();
 		}
 	</script>
+
+	<style>
+		iframe {
+			position: absolute;
+			height: 100%;
+			max-height: 30em;
+			width: 100%;
+			max-width: 16em;
+		}
+	</style>
 </head>
 
 <body>
-	<iframe width=400, height=500 frameborder="2" id="ichat" name="chatFrame" scrolling="no" style="overflow:hidden">
-
-	</iframe>
-
+	<div>
+		<iframe id="ichat" name="chatFrame" scrolling="no"></iframe>
+	</div>
 	<form id=webchat target="chatFrame" method="post" action="#">
 		<input type="hidden" id="Reason" name="Reason" class="form-control" value="SBC_WebChat">
 		<input type="hidden" name="UserLanguage" value="en">

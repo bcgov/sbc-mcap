@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8" />
 
+
   <style>
     div {
       width: 500px;
@@ -49,6 +50,10 @@
       background: #f6f6f6;
     }
 
+    pre code {
+      white-space: normal;
+    }
+
     pre {
       font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
       margin-bottom: 10px;
@@ -68,21 +73,31 @@
     <h2>WebChat Test</h2>
 
     <ul>
-      <!-- <li>
-        <a href="#"
-          onclick="window.open('webchat', 'webchat', 'width=400,height=500');">
-          Click for WebChat Popup
-        </a>
-        <pre><code>&lt;a href="#" 
-onclick="window.open('https://[webchat-url]',
-'webchat', 'width=400,height=500');"&gt;
-Click here for WebChat Popup&lt;a&gt;</code></pre>
-      </li> -->
 
       <li>
+        <br>
         <a href="./webchat">Click for WebChat Page</a>
-        <pre><code>&lt;a href="https://[webchat-url]"&gt;
-Click here for WebChat Page&lt;a&gt;</code></pre>
+        <pre><code>&lt;a href="&ltWebChat URL&gt;"
+          Click for WebChat Page&lt;a&gt;</code></pre>
+        <p>Note: Use this if you are unable to open a new window. It will behave exactly as you
+          would expect an "a" link to work. It will replace the contents of your current browser
+          window with the chat window. </p>
+      </li>
+
+      <li>
+        <br>
+        <a href="#" onclick="window.open('webchat', 'webchat', 'width=400,height=500');">
+          Click for WebChat Popup
+        </a>
+        <pre><code>&lt;a href="#" onclick="window.open("&ltWebChat URL&gt;",
+          'webchat', 'width=400,height=500');"&gt;
+          Click for WebChat Popup&lt;a&gt;</code></pre>
+        <p>Note: Use this option if you are able to open a new window from your website and specify
+          the size. This is the preferred option as the user will see a new char window overlayed on
+          top of your webpage. Your page MUST be the one that opens and sizes the new window. This
+          is a basic restriction of how browsers work. The webchat window cannot size your new
+          window for you since it did not create that window. That security is baked into every
+          browser. </p>
       </li>
     </ul>
   </div>

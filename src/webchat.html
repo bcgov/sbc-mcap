@@ -8,17 +8,32 @@
 		window.onload = function () {
 			console.log(serverConfig.ChatServicesUrl);
 			document.getElementById("webchat").action = serverConfig.ChatServicesUrl;
-			document.getElementById("webchat").submit();
+			//document.getElementById("webchat").submit();
+
+			if (isMobile()) {
+				document.getElementById("ichat").className += "mobile";
+			}
+			else {
+				document.getElementById("ichat").className += "desktop";
+			}
+		}
+
+		function isMobile() {
+			return (/Android|webOS|iPhone|iPad/i.test(navigator.userAgent));
 		}
 	</script>
 
 	<style>
-		iframe {
+		iframe.desktop {
+			width: 400px;
+			height: 500px;
 			position: absolute;
-			height: 100%;
-			max-height: 28em;
-			width: 100%;
-			max-width: 20em;
+		}
+
+		iframe.mobile {
+			width: 100vw;
+			height: 100vh;
+			position: absolute;
 		}
 	</style>
 </head>

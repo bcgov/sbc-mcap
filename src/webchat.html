@@ -8,7 +8,7 @@
 		window.onload = function () {
 			console.log(serverConfig.ChatServicesUrl);
 			document.getElementById("webchat").action = serverConfig.ChatServicesUrl;
-			//document.getElementById("webchat").submit();
+			document.getElementById("webchat").submit();
 
 			if (isMobile()) {
 				document.getElementById("ichat").className += "mobile";

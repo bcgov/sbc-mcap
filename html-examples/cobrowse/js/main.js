@@ -17,9 +17,9 @@ function initCobrowse() {
     console.log('initCobrowse called');
     //isBrowserSupported is defined in assist.js, so we know it's loaded. 
     if (AssistSDK.isBrowserSupported && AssistSDK.isBrowserSupported()) {
-        // These are set in config.js
-        window.agentIdVar=condig.agentId;
-        window.videoAssistUrl=condig.videoAssistUrl.
+        // These are set in appConfig.js
+        window.agentIdVar=appConfig.agentId;
+        window.videoAssistUrl=appConfig.videoAssistUrl;
         AssistBoot.addAssistBehaviour();
         AssistBoot.startAssistDialog();
     }

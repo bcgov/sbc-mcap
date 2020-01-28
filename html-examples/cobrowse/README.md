@@ -1,10 +1,16 @@
+## CoBrowse Simple Example
 
 Using `npx` you can run the script without installing it first:
+Use one of the following from node.
 
-npx http-server [path] [options]
+```
+npx http-server
 
-SPA_ENV_SERVER_URL
-https://spa-env-server-dev.pathfinder.gov.bc.ca/env
+npm run start
+```
 
-SPA_ENV_AUTH_TOKEN
-5993117a-2384-4b70-ad42-1e9b9e6044d9
+Configure `./js/appConfig.js` with the videoAssistUrl and agentId you need
+In this example, we use agentId="agent1"
+
+videoAssistUrl will use :8443 if testing from internal network.
+Otherwise do not use :8443

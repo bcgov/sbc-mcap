@@ -72,6 +72,7 @@ function initAll() {
     console.log('ChatServicesUrl:' + chatServicesUrl);
     
     $(".chatpopup").attr('action', chatServicesUrl);
+
     //Co-Browse Setup -----
     console.log('assistjs_url---' + assistjs_url);
     addScript(assistjs_url)

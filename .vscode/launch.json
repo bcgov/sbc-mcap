@@ -14,9 +14,10 @@
 			"program": "${workspaceFolder}\\index.js",
 			"env": {
 				"ASSISTJS_URL": "remote-js/assist.js",
-				"VIDEO_ASSIST_URL": "https://video-poc1.maximusbc.ca:8443",
-				// "CHAT_SERVICES_URL": "https://testchatservices.maximusbc.ca/Home/Chat",
-				"CHAT_SERVICES_URL": "http://vs-uccl-025.maximusbchealth.local:84/Home/Chat",
+				//"VIDEO_ASSIST_URL": "https://video-poc1.maximusbc.ca:8443",
+				"VIDEO_ASSIST_URL": "https://video-poc1.maximusbc.ca",
+				"CHAT_SERVICES_URL": "https://testchatservices.maximusbc.ca/Home/Chat",
+				//"CHAT_SERVICES_URL": "http://vs-uccl-025.maximusbchealth.local:84/Home/Chat",
 				"AGENT_ID": "sip:7783727966@aaa.qaz",
 				"SPA_ENV_AUTH_TOKEN": "5993117a-2384-4b70-ad42-1e9b9e6044d9",
 				"SPA_ENV_SERVER_URL": "https://spa-env-server-dev.pathfinder.gov.bc.ca/env",

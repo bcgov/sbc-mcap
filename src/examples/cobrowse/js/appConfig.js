@@ -1,4 +1,4 @@
 const appConfig = {
-	videoAssistUrl: "https://video-poc1.maximusbc.ca:8443",
+	videoAssistUrl: "https://video-poc1.maximusbc.ca",
 	agentId: "agent1"
 };

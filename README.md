@@ -90,3 +90,6 @@ If you cannot connect to the server, the HTTP status will indicate the error num
 
 Since CoBrowse requires you to be on the call first, you will not need any additional programming for hours of operations.  The voice call will let you know if you are calling outside of business hours.
 
+https://console.pathfinder.gov.bc.ca:8443/console/project/gcpe-mygovbc-msp-tools/browse/pipelines
+
+https://console.pathfinder.gov.bc.ca:8443/console/project/gcpe-mygovbc-msp-dev/browse/dc/mcap

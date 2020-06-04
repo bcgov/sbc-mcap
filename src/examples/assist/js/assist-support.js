@@ -217,7 +217,7 @@ var QueryString = (function () {
   // the return value is assigned to QueryString!
   var query_string = {};
   var query = window.location.search.substring(1);
-  console.log("query=" + query);
+  // console.log("query=" + query);
 
   var vars = query.split("&");
   for (var i = 0; i < vars.length; i++) {

@@ -20,11 +20,11 @@ window.AssistBoot = {
       return;
       //This is effectively copied from supportEnded() but without deleting the method.
       //TODO: TEST! Removed the alert() and replaced with hopefully fixing the error.
-      removeEndSupportGui();
-      activeSession = false;
-      inSupport = false;
-      localStorage.removeItem("cid-only");
-      console.log("%cA support call is already active - and has been cleared", "background-color: black; color: white;");
+      // removeEndSupportGui();
+      // activeSession = false;
+      // inSupport = false;
+      // localStorage.removeItem("cid-only");
+      // console.log("%cA support call is already active - and has been cleared", "background-color: black; color: white;");
     }
 
     config = assistConfig();

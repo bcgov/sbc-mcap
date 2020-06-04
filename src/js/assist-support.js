@@ -462,7 +462,6 @@ window.AssistSDK = {
     alert("Co-browsing is inactive or ended");
 
   }
-
 };
 
 function getHelpModal() {

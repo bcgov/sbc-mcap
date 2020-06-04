@@ -65,7 +65,6 @@ window.AssistBoot = {
   addAssistBehaviour: function addAssistBehaviour() {
     delete AssistSDK.onScreenshareRequest;
 
-    //document.body.appendChild(getHelpModal());
     document.body.appendChild(getHelpModal());
     document.body.appendChild(getShortCodeModal());
 
@@ -317,7 +316,7 @@ function assistConfig() {
       console.log("Shadow consumer mouse cursor to agent.");
     }
     if (QueryString.shadowCursorDelay) {
-      console.log("Send agent consumer mouse position every " + QueryString.shadowCursorDelay + " ms.");
+      console.log("Send agent consumer mouse position every " + QueryString.shadowCursorDelay + "ms.");
       settings.shadowCursorDelay = QueryString.shadowCursorDelay;
     }
 
@@ -327,7 +326,6 @@ function assistConfig() {
     }
 
     setupConnectionStatusCallbacks(settings);
-
     return settings;
   }
 
@@ -473,29 +471,26 @@ function getHelpModal() {
   helpModal.classList.add("modal");
   helpModal.classList.add("fade");
   helpModal.innerHTML =
-    '        <div class="modal background"></div>\n' +
-    '        <div class="modal-dialog text-center">\n' +
-    '            <div class="modal-content">\n' +
-    '                <div class="modal-header modal-header-primary">\n' +
-    "                    <h2>Co-Browsing</h2>\n" +
-    "                </div>\n" +
-    '                <div class="modal-body">\n\n' +
-    "                    <p>Share my screen with a support agent</p>\n" +
-    "                    <button type=\"button\"\n" +
-    "                            id=\"help-call-and-share\"\n" +
-    "                            class=\"btn btn-success btn-lg btn-block\">Call support and then share</button>\n" +
-    "                    <br>\n" +
-    '                    <button type="button"\n' +
-    '                            id="help-want-to-share"\n' +
-    '                            class="btn btn-success btn-lg btn-block">Share my Browser Window</button>\n' +
-    "                </div>\n" +
-    '                <div class="modal-footer">\n' +
-    '                    <button type="button"\n' +
-    '                            id="help-no-help-needed"\n' +
-    '                            class="code btn btn-default btn-lg btn-secondary btn-block">I don\'t need help</button>\n' +
-    "                </div>\n" +
-    "            </div>\n" +
-    "        </div>\n";
+    '<div class="modal background"></div>\n' +
+    '<div class="modal-dialog text-center">\n' +
+    '<div class="modal-content">\n' +
+    '<div class="modal-header modal-header-primary">\n' +
+    '<h2>Co-Browsing</h2>\n' +
+    '</div>\n' +
+    '<div class="modal-body">\n\n' +
+    '<p>Share my screen with a support agent</p>\n' +
+    '<button type="button" id="help-call-and-share"\n' +
+    'class="btn btn-success btn-lg btn-block">Call support and then share</button>\n' +
+    '<br>\n' +
+    '<button type="button" id="help-want-to-share"\n' +
+    'class="btn btn-success btn-lg btn-block">Share my Browser Window</button>\n' +
+    '</div>\n' +
+    '<div class="modal-footer">\n' +
+    '<button type="button" id="help-no-help-needed"\n' +
+    'class="code btn btn-default btn-lg btn-secondary btn-block">I don\'t need help</button>\n' +
+    '</div>\n' +
+    '</div>\n' +
+    '</div>\n';
   return helpModal;
 }
 
@@ -509,23 +504,23 @@ function getShortCodeModal() {
   shortCodeModal.classList.add("modal");
   shortCodeModal.classList.add("fade");
   shortCodeModal.innerHTML =
-    '        <div class="modal background"></div>\n' +
-    '        <div class="shortcode-modal-dialog modal-dialog text-center">\n' +
-    '            <div class="modal-content">\n' +
-    '                <div class="modal-header modal-header-primary">\n' +
-    "                    <h2>Shortcode</h2>\n" +
-    "                </div>\n" +
-    '                <div class="modal-body client-title">\n\n' +
-    "                    <p>If you are not speaking to an Agent already, please call 800 123 4567 and give your Agent this code</p>" +
-    '                    <pre class="code"></pre>\n\n' +
-    "                </div>\n" +
-    '                <div class="modal-footer">\n' +
-    '                    <button type="button"\n' +
-    '                            id="code-no-help-needed"\n' +
-    '                            class="btn btn-default btn-block">I don\'t need help</button>\n' +
-    "                </div>\n" +
-    "            </div>\n" +
-    "        </div>\n";
+    '<div class="modal background"></div>\n' +
+    '<div class="shortcode-modal-dialog modal-dialog text-center">\n' +
+    '<div class="modal-content">\n' +
+    '<div class="modal-header modal-header-primary">\n' +
+    "<h2>Shortcode</h2>\n" +
+    "</div>\n" +
+    '<div class="modal-body client-title">\n\n' +
+    "<p>If you are not speaking to an Agent already, please call 800 123 4567 and give your Agent this code</p>" +
+    '<pre class="code"></pre>\n\n' +
+    "</div>\n" +
+    '<div class="modal-footer">\n' +
+    '<button type="button"\n' +
+    'id="code-no-help-needed"\n' +
+    'class="btn btn-default btn-block">I don\'t need help</button>\n' +
+    "</div>\n" +
+    "</div>\n" +
+    "</div>\n";
   return shortCodeModal;
 }
 

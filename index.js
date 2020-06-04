@@ -34,10 +34,6 @@ app.get('/', function (req, res) {
     res.sendFile('/index.html');
 });
 
-app.get('/webchat', function (req, res) {
-    res.sendFile('/webchat.html', { root: __dirname + '/src/'});
-});
-
 app.listen(SERVICE_PORT);
 
 console.log("Running on Port %s", SERVICE_PORT);

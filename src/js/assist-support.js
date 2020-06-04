@@ -472,32 +472,26 @@ function getHelpModal() {
   helpModal.classList.add("modal");
   helpModal.classList.add("fade");
   helpModal.innerHTML =
-    "        <div class=\"modal background\"></div>\n" +
-    "        <div class=\"modal-dialog text-center\">\n" +
-    "            <div class=\"modal-content\">\n" +
-    "                <div class=\"modal-header modal-header-primary\">\n" +
-    "                    <h2>Co-Browsing</h2>\n" +
-    // "                    <button type=\"button\"\n" +
-    // "                            class=\"close\"\n" +
-    // "                            id=\"assist-modal-help-close\">&times;</button>\n" +
-    "                </div>\n" +
-    "                <div class=\"modal-body\">\n\n" +
-    "                    <p>Share my screen with a support agent</p>\n" +
-    "                    <button type=\"button\"\n" +
-    "                            id=\"help-call-and-share\"\n" +
-    "                            class=\"btn btn-success btn-lg btn-block\">Call support and then share</button>\n" +
-    "                    <br>\n" +
-    "                    <button type=\"button\"\n" +
-    "                            id=\"help-want-to-share\"\n" +
-    "                            class=\"code btn btn-success btn-lg btn-block\">Already on the call, want to share</button>\n" +
-    "                </div>\n" +
-    "                <div class=\"modal-footer\">\n" +
-    "                    <button type=\"button\"\n" +
-    "                            id=\"help-no-help-needed\"\n" +
-    "                            class=\"btn btn-default btn-block\">I don't need help</button>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "        </div>\n";
+    '<div class="modal background"></div>' +
+    '<div class="modal-dialog text-center">' +
+    '<div class="modal-content">' +
+    '<div class="modal-header-primary modal-header">' +
+    '<h2>Co-Browsing</h2>' +
+    '</div>' +
+    '<div class="modal-body">' +
+    '<p>Share my screen with a support agent</p>' +
+    '<button type="button" id="help-call-and-share"' +
+    'class="btn btn-success btn-lg btn-block">Call support and then share</button>' +
+    '<br>' +
+    '<button type="button" id="help-want-to-share"' +
+    'class="btn btn-success btn-lg btn-block">Share my Browser Window</button>' +
+    '</div>' +
+    '<div class="modal-footer">' +
+    '<button type="button" id="help-no-help-needed"' +
+    'class="code btn btn-default btn-lg btn-secondary btn-block">I don\'t need help</button>' +
+    '</div>' +
+    '</div>' +
+    '</div>';
   return helpModal;
 };
 

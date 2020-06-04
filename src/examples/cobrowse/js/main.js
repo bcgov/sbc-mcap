@@ -1,15 +1,21 @@
-const appConfig = {
-	videoAssistUrl: "https://video-poc1.maximusbc.ca",
-	agentId: "agent1"
-};
+$(function () {
 
-const initCobrowse = function () {
-	console.log("initCobrowse called");
-	// AssistSDK is defined in assist.js, so we know it's loaded.
-	if (AssistSDK && AssistSDK.isBrowserSupported()) {
-		window.agentIdVar = appConfig.agentId;
-		window.videoAssistUrl = appConfig.videoAssistUrl;
-		AssistBoot.addAssistBehaviour();
-		AssistBoot.startAssistDialog();
-	}
-};
+  const appConfig = {
+    videoAssistUrl: "https://video-poc1.maximusbc.ca",
+    agentId: "sip:7783727966@aaa.qaz",
+  };
+
+  // Adds Assist Behavior to the page 
+  if (AssistSDK && AssistSDK.isBrowserSupported()) {
+    window.agentIdVar = appConfig.agentId;
+    window.videoAssistUrl = appConfig.videoAssistUrl;
+    AssistBoot.addAssistBehaviour();
+  }
+
+  $("#start").on("click", () => {
+    $("#assist-modal-help").modal("show");
+  });
+
+});
+
+

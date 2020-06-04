@@ -39,13 +39,14 @@ function readEnvironment() {
         console.log("Maintenance: " + msg.SPA_ENV_MCAP_MAINTENANCE_FLAG);
         console.log("Chat services: " + msg.SPA_ENV_MCAP_CHAT_SERVICES_URL);
 
-        // If NOT in maintenance mode
-        if (msg.SPA_ENV_MCAP_MAINTENANCE_FLAG == 'true') {
-            $("div#pagecontentid").hide();
-            $("div#maintenance").show();
-            $("#maintNotice").text(msg.SPA_ENV_MCAP_MAINTENANCE_MESSAGE);
-        }
-        else {
+        // // If NOT in maintenance mode
+        // if (msg.SPA_ENV_MCAP_MAINTENANCE_FLAG == 'true') {
+        //     $("div#pagecontentid").hide();
+        //     $("div#maintenance").show();
+        //     $("#maintNotice").text(msg.SPA_ENV_MCAP_MAINTENANCE_MESSAGE);
+        // }
+        // else 
+        {
             assistjs_url = msg.SPA_ENV_MCAP_ASSISTJS_URL;
             chatServicesUrl = msg.SPA_ENV_MCAP_CHAT_SERVICES_URL;
             window.agentIdVar = msg.SPA_ENV_MCAP_AGENT_ID;

@@ -468,7 +468,7 @@ function getHelpModal() {
     '<div class="modal-dialog text-center">' +
     '<div class="modal-content">' +
     '<div class="modal-header-primary modal-header">' +
-    '<h2>Co-Browsing</h2>' +
+    '<h2>Live Support</h2>' +
     '</div>' +
     '<div class="modal-body">' +
     '<p>Share my screen with a support agent</p>' +

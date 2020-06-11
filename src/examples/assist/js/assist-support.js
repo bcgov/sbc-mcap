@@ -18,17 +18,11 @@ window.AssistBoot = {
     if (activeSession) {
       window.alert("A support call is already active");
       return;
-      //This is effectively copied from supportEnded() but without deleting the method.
-      //TODO: TEST! Removed the alert() and replaced with hopefully fixing the error.
-      // removeEndSupportGui();
-      // activeSession = false;
-      // inSupport = false;
-      // localStorage.removeItem("cid-only");
-      // console.log("%cA support call is already active - and has been cleared", "background-color: black; color: white;");
     }
 
     config = assistConfig();
     console.log("videoAssistUrl" + window.videoAssistUrl);
+
     //  config.url = 'https://video-poc1.maximusbc.ca';
     config.url = window.videoAssistUrl;
     config.sdkPath = config.url + "/assistserver/sdk/web/consumer";
@@ -53,7 +47,7 @@ window.AssistBoot = {
         window.alert("Your browser is not supported!");
       }
     } else {
-      // Present the User with a dialog to choose to make Voice & Vide call,
+      // Present the User with a dialog to choose to make Voice & Video call,
       // or to use Short Code Assist.
       $("#assist-modal-help").modal();
     }
@@ -71,7 +65,7 @@ window.AssistBoot = {
 		/**
 		 * Place a call to an Agent, cobrowsing can happen after the call is established.
 		 */
-    document.getElementById('help-call-and-share').addEventListener('click', function () {
+    document.getElementById('help-call-and-share').addEventListener('click', () => {
 
       console.log(config);
       config = assistConfig();
@@ -95,7 +89,7 @@ window.AssistBoot = {
 		 *  The Callback is used to present a modal dialog, prompting the user to read out the
 		 *  generated code to the Agent. The modal is defined
 		 */
-    document.getElementById("help-want-to-share").addEventListener("click", function () {
+    document.getElementById("help-want-to-share").addEventListener("click", () => {
       console.log(config);
       config = assistConfig();
       console.log("videoAssistUrl" + window.videoAssistUrl);
@@ -206,7 +200,7 @@ var chunk = function chunk(str, n) {
   return ret;
 };
 
-var forEach = function forEach(nodeList, callback, scope) {
+const forEach = function forEach(nodeList, callback, scope) {
   for (var i = 0; i < nodeList.length; i++) {
     callback.call(scope, i, nodeList[i]);
   }

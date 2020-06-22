@@ -23,8 +23,7 @@ app.use("/icons", express.static(__dirname + '/icons'));
 app.use("/images", express.static(__dirname + '/images'));
 app.use(express.static(__dirname + '/config'));
 
-// Read environment urls and write them to a static js file during start up.
-// Used for externalising the urls and supplying them to client
+// Read the required items from the OS environment
 const configObj = {
   AssistJSUrl: process.env.ASSISTJS_URL,
   videoAssistUrl: process.env.VIDEO_ASSIST_URL,
@@ -34,6 +33,9 @@ const configObj = {
   authorizationToken: 'spaenv ' + process.env.SPA_ENV_AUTH_TOKEN
 };
 
+// Write this object to a js file so it can be included by index.html. Note this is totally optional 
+// when you write your own page.  You can get access to these items in various ways.  See 
+// the simplified examples for more 
 fs.writeFileSync(
   `${__dirname}/config/serverconfig.js`, 'var serverConfig = ' + JSON.stringify(configObj), 'utf-8'
 );

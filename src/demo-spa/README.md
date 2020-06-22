@@ -1,5 +1,5 @@
-# sbc-mcap
-ServiceBC Multi-Channel Access Page.
+
+#ServiceBC Multi-Channel Access Page
 
 # Setup the environment
 

@@ -11,7 +11,7 @@
 			"skipFiles": [
 				"<node_internals>/**"
 			],
-			"program": "${workspaceFolder}/src/demo/index.js",
+			"program": "${workspaceFolder}/src/demo-spa/index.js",
 			"env": {
 				"ASSISTJS_URL": "remote-js/assist.js",
 				//"VIDEO_ASSIST_URL": "https://video-poc1.maximusbc.ca:8443",

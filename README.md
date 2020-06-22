@@ -1,6 +1,6 @@
 # ServiceBC Multi-Channel Access Pages (MCAP)
 
-This project contains examples of how to write web pages that can use MSP multi channel contact. The three functions that are demonstrated in this project are:
+This project contains examples of how to build web pages that can implement Service BC Multi-Channel Contact functions. The three functions demonstrated in this project are:
 - Web Chat
 - Live Assist - video chat
 - Live Assist - co-browswe

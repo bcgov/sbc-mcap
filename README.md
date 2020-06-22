@@ -10,7 +10,6 @@ You can run all these application locally on your computer. Instructions for doi
 All of the example pages contained herein require familiarity with web page development including html, css and javascript.  Familiarity with the JQuery javascript library would be very useful as well as some minimal understanding of Bootstrap CSS, although that is not as important unless you want to modify the look and feel of the underlying controls.
 
 #### MCAP Single Page Demo App (src/demo-spa)
-  http://localhost:8080/<br>
   This is a Single Page Application (SPA) "Contact Us" page written with JQuery and Bootstrap so demonstrate a full user experience page.  It contains links to the 3 functions that are the core of MCAP.  Many of the links on this page are just placeholders and have no real functions.  Some familiarity with jQuery and Bootstrap is required to use and modify this SPA.
 
 

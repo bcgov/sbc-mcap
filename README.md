@@ -5,7 +5,7 @@ This project contains examples of how to write web pages that can use MSP multi 
 - Live Assist - video chat
 - Live Assist - co-browswe
 
-You can run all these application locally on your computer. Instructions for doing so are included in the `README.MD` file included in each sub-project
+You can run all these application locally on your computer. Instructions for doing so are included in the `README.MD` file included in each sub-project.  No special infrastructure or software is required to run these applicatons.  They can all be run using readily available, free software that are well-known to all web developers such as Visual Studeo Code, node.js, etc.  Most of the example applications can be run directly from a browser with no additional software.
 
 All of the example pages contained herein require familiarity with web page development including html, css and javascript.  Familiarity with the JQuery javascript library would be very useful as well as some minimal understanding of Bootstrap CSS, although that is not as important unless you want to modify the look and feel of the underlying controls.
 

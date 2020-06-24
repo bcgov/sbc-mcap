@@ -1,4 +1,4 @@
-# webchat example code
+# Webchat example code
 
 ### index.html
 

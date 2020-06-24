@@ -2,10 +2,10 @@
 
 This project contains examples of how to build web pages that can implement Service BC Multi-Channel Contact functions. The three functions demonstrated in this project are:
 - Web Chat - Web Chat is a method for citizens to chat online with an SBC representative to assist in Government Services.
-Features - 
+* Features - 
   * API to show application availability
   * Initiate a Web Chat session
-User - 
+* User - 
   * Add link to onboarding to SBC Contact Center Service
 
 - Live Assist - video chat - Video Chat is a method for citizens to video chat with an SBC representative to assist in Government Services.

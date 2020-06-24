@@ -1,11 +1,11 @@
 # ServiceBC Multi-Channel Access Pages (MCAP)
 
 This project contains examples of how to build web pages that can implement Service BC Multi-Channel Contact functions. The three functions demonstrated in this project are:
-- Web Chat
-- Live Assist - video chat
-- Live Assist - co-browswe
+- Web Chat - Web Chat is a method for citizens to chat online with an SBC representative to assist in Government Services.
+- Live Assist - video chat - Video Chat is a method for citizens to video chat with an SBC representative to assist in Government Services.
+- Live Assist - co-browse - Co-Browse is an online function to provide the citizen the ability to share their screen with a SBC representative.
 
-You can run all these application locally on your computer. Instructions for doing so are included in the `README.MD` file included in each sub-project.  No special infrastructure or software is required. They can all be run using readily available free software, well-known to all web developers, such as Visual Studeo Code, node.js, etc.  Most of the example applications can be run directly from a browser with no additional software at all.
+You can run all these application locally on your computer. Instructions for doing so are included in the `README.MD` file included in each sub-project.  No special infrastructure or software is required. They can all be run using readily available free software, well-known to all web developers, such as Visual Studio Code, node.js, etc.  Most of the example applications can be run directly from a browser with no additional software at all.
 
 All of the example pages contained herein require familiarity with web page development including html, css and javascript.  Familiarity with the JQuery javascript library would be very useful as well as some minimal understanding of Bootstrap CSS, although that is not as important unless you want to modify the look and feel of the underlying controls.
 

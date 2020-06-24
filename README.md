@@ -2,6 +2,12 @@
 
 This project contains examples of how to build web pages that can implement Service BC Multi-Channel Contact functions. The three functions demonstrated in this project are:
 - Web Chat - Web Chat is a method for citizens to chat online with an SBC representative to assist in Government Services.
+* Features - 
+  * API to show application availability
+  * Initiate a Web Chat session
+* User - 
+  * Add link to onboarding to SBC Contact Center Service
+
 - Live Assist - video chat - Video Chat is a method for citizens to video chat with an SBC representative to assist in Government Services.
 - Live Assist - co-browse - Co-Browse is an online function to provide the citizen the ability to share their screen with a SBC representative.
 
@@ -23,7 +29,14 @@ Both of these example sub-projects contain the minimal html/css/javascript requi
 
 
 Please note the code contained herein is example code only. This code can be used as a starting 
-point for a developing your own production application but is not intended or expected to be 
+point for developing your own production application but is not intended or expected to be 
 interpreted as a supported or finished project. 
+
+### Prerequisites
+
+In order to setup Webchat and Live Assist (video chat and co-browse), the following information is required from MAXIMUS Canada:
+- Agent ID
+- MCAP Test and Production url
+
 
 

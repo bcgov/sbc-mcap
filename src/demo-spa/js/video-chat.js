@@ -22,11 +22,13 @@ $(function () {
   if (serverConfig.spaEnvServerURL)
     readEnvironment();
 
+    console.log(AssistSDK);
+    
     AssistBoot.addAssistBehaviour();
   // initAll();
 });
 
-// This just loads the environment propoerties (url's, etc) from a settings server
+// This just loads the environment properties (url's, etc) from a settings server
 function readEnvironment() {
   console.log('Loading Environment from ENV_SERVER');
 
@@ -65,6 +67,7 @@ function initAll() {
   //   .fail(onCobrowseFailToLoad);
   initCobrowse();
 }
+
 
 function initCobrowse() {
   AssistBoot.addAssistBehaviour();

@@ -22,6 +22,7 @@ app.use("/fonts", express.static(__dirname + '/fonts'));
 app.use("/icons", express.static(__dirname + '/icons'));
 app.use("/images", express.static(__dirname + '/images'));
 app.use("/webchat", express.static(__dirname + '/../examples/webchat'));
+app.use("/assist", express.static(__dirname + '/../examples/assist'));
 app.use(express.static(__dirname + '/config'));
 
 console.log(__dirname + '/../examples/webchat' );

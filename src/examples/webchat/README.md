@@ -9,7 +9,7 @@ A webchat session must be started with an http POST request as shown in the code
 To use:
 1. Edit the "action" attribute of the form element if needed.
 2. Open index.html with your browser.
-3. Click the "Start Webchat" button
+3. Click the "Start Assistance" button
 
 ## Description
 

@@ -19,3 +19,10 @@ The file `autopost.html` is identical to `index.html` but has some added javascr
 
 The file `index-auto.html` is an example of how one might use `autopost.html`.  It is self documenting 
 
+## Running the WebChat Demo page(s)
+Since no Javascript is used in the webchat demo page the easiest way to run then is to simple open them directly in your browser.  For example, from a Windows computer just double click on any of the 3 files to open.  You will be able to start a webchat session.
+
+You can also open the WebChat demo pages from within the node.js mini web server application included with the SPA Demo page.  Simple start that node app and navigate to: http://localhost:8080/webchat/ for the main index.html file or http://localhost:8080/webchat/index-auto.html for the auto-post example page.
+
+Note.  Depending on the time of day and other factors, the webchat page may not open immediately. It may take an couple of tries for it to respond.
+

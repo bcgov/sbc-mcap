@@ -11,12 +11,15 @@ To use:
 
 The file `index.html` is the `"hello world"` equivalent of a Live Assist.  It contains the bare minimum to open up a Live Assist dialog in a 'popup' frame.  In this file is a single button with a jQuery `click` listener to which will bring up the live assist dialog. This dialog is identical to that displayed in the SPA Demo page and is built into the example SDK.  The asociated `index.js` file is loaded by `index.html` and handles initialization of Live Assist as well as the `click` handler on the button. 
 
+Clicking the button in this example simply makes the Live assist Dialog visible with the following line:<br>
+`$("#assist-modal-help").modal("show");`
+
 ## Live Assist SDK
-The following two files make up the Live Assist  SDK.
+The following two files make up the Live Assist  SDK. These files are included in this project and you can edit and experiment with them to change things like the dialog text, etc.
   - assist-support.js  
   - short-code-assist.js
 
-These files in turn have several dependancies. These are included in `index.html`
+These files in turn have several remote dependancies. These are included in `index.html`. 
 
 ## Running the Live Assist Demo page
 

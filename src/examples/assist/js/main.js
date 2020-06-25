@@ -3,22 +3,18 @@ const appConfig = {
   agentId: "sip:7783727966@aaa.qaz",
 };
 
+// Run when page has finished loading
 $(function () {
 
   window.agentIdVar = appConfig.agentId;
   window.videoAssistUrl = appConfig.videoAssistUrl;
 
-  console.log(AssistSDK);
-
-  if (!AssistSDK) {
-    console.error("startAssistDialog error, AssistSDK is not defined.");
+  if (!AssistSDK.isBrowserSupported()) {
+    alert("Your browser is not supported");
   }
-
-  if (!AssistSDK.isBrowserSupported) {
-    console.error("startAssistDialog error, AssistSDK.isBrowserSupported is not defined.");
+  else {
+    AssistBoot.addAssistBehaviour();
   }
-
-  AssistBoot.addAssistBehaviour();
 
   $("#start").on("click", () => {
     $("#assist-modal-help").modal("show");

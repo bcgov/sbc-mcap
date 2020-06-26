@@ -1,4 +1,4 @@
-## LiveAssist Simple Example Page
+## Live Assist Simple Example Page
 
 This is a basic single file example for how to open a live asssist   session
 You can run this from any http server or even as a local file directly from your browser. 

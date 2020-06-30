@@ -36,10 +36,14 @@ function readEnvironment() {
     });
 
     request.done(function (msg) {
+
+      // Comment these lines if you don't want this logged 
+        console.log(msg);
         console.log("Maintenance: " + msg.SPA_ENV_MCAP_MAINTENANCE_FLAG);
         console.log("Chat services: " + msg.SPA_ENV_MCAP_CHAT_SERVICES_URL);
 
-        // // If NOT in maintenance mode
+        // Note: Uncomment this if you want to disable after hours or maintenance mode
+        // If NOT in maintenance mode
         // if (msg.SPA_ENV_MCAP_MAINTENANCE_FLAG == 'true') {
         //     $("div#pagecontentid").hide();
         //     $("div#maintenance").show();

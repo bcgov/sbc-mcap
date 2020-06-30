@@ -30,8 +30,15 @@ You can also setup a launch config in your Visual Studio Code IDE to set these e
 
 If you choose to instead have the SPA Demo pages served by a different web server such as Apache or NGinx you can create your own serverconfig.js file used by index.html. You may need to edit the `<script>` tag within index.html depending on the location of your `serverconfig.js` file.  Alternatively you may wish to have the config variables load some other way.  The implementation is completely up to you as long as there is `serverConfig` object available to the SPA.
 
+## Reading a Remote Environment
+The Environment Variable SPA_ENV_SERVER_URL points to a demo location that will return the above Environment variables needed for the demo.  If you wish you can query this remote location to obtain the current environment variables, including whether the assist server is in maintenance mode or after hours. To see an example of this, look at the readEnvironment() function in main.js
+
+Using a remote Environment means that your app only needs to know the address of the Remove Env server and the Authorization Key needed to query it.  All the other information will be available from the remote server.
+
+This lookup is performed for you in the SDK on startup but you can modify this behavior if needed. Refer to the readEnvironment() function in main.js for more examples of how to do this.
+
 ## Running the SPA Demo page
-Once you have the static pages available, either through the development node application or on your own web server, simple browse to the url of the SPA Demo page.  For a localhost setup the url will be http://localhost:8080
+Once you have the static pages available, either  through the development node application or on your own web server, simple browse to the url of the SPA Demo page.  For a localhost setup the url will be http://localhost:8080
 
 
 

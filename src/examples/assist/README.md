@@ -26,3 +26,12 @@ These files in turn have several remote dependancies. These are included in `ind
 You can  open the Live Assist example page from within the node.js mini web server application included with the SPA Demo page.  Simple start that node app and navigate to: http://localhost:8080/assist/ 
 
 Note.  Depending on the time of day and other factors, the video window may not open immediately. It may take an couple of tries for it to respond.
+
+## Start Assistance Button
+
+The Start Assistance button on this example page is attached to a jQuery click handler in the jQuery startup function in main.js.  All the click handler does is make the Live Assist Dialog Visible so the user can select Video Chat or CoBrowse
+
+## Read Remote Env Button
+
+The Read Remote Env button on this example page is attached to a jQuery click handler in the jQuery startup function in main.js.  This click handler fetches the current values of the environment variables from the Remote Environment Server. These are the same environment variables that are needed to initialize WebChat and Live Assist which means, given the env server url and its auth token, you can retrieve everything else you need from the remote environment server.  This is what the Assist SDK does on startup.
+

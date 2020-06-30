@@ -8,13 +8,13 @@ This project contains examples of how to build web pages that can implement Serv
   * User
     * Add link to onboarding to SBC Contact Center Service
 
-- Live Assist - video chat - Video Chat is a method for citizens to video chat with an SBC representative to assist in Government Services.
+- Live Assist (Video Chat) - Video Chat is a method for citizens to video chat with an SBC representative to assist in Government Services.
   * Features
     * API to show application availability
     * Initiate a Video Chat session
   * User
     * Add link to onboarding to SBC Contact Center Service
-- Live Assist - co-browse - Co-Browse is an online function to provide the citizen the ability to share their screen with a SBC representative.
+- Live Assist (Co-Browse) - Co-Browse is an online function to provide the citizen the ability to share their screen with a SBC representative.
   * Features
     * API to show application availability
     * Initiate a Co-Browse session
@@ -33,7 +33,7 @@ All of the example pages contained herein require familiarity with web page deve
   #### Simple html-based examples (src/examples)
   There are two simplified example applications:
   - Web Chat
-  - Live Assist (both video and co-browse)
+  - Live Assist (both Video Chat and Co-Browse)
 
 Both of these example sub-projects contain the minimal html/css/javascript required to implement each of the MCAP functions they demonstrate.  These example do not require node.js or any other infrastructure to run.  They can be run directly from a browser or placed on any web server and used directly.  For more information please refer to the `README.MD` in each sub-project.
 

@@ -7,12 +7,12 @@ This example page requires good familiarity with web page development including 
 
 ## Installing the Project Locally
 To install this project on your local development environment simple perform the following steps:
-- ensure you have node.js installed. v10.x or higher is best
-- clone the MCAP project
-- from the terminal change to the SPA directory: `#cd sbc-mcap/src/demo-spa`
-- install the required node modules `#npm install`
-- ensure you have the required enviroment variables set (see below)
-- run the node app that serves the static pages `#node index.js`
+- Ensure you have node.js installed. v10.x or higher is best
+- Clone the MCAP project
+- From the terminal change to the SPA directory: `#cd sbc-mcap/src/demo-spa`
+- Install the required node modules `#npm install`
+- Ensure you have the required enviroment variables set (see below)
+- Run the node app that serves the static pages `#node index.js`
 
 ## Included Web Server Application Description
 `index.js` is a small node.js web server application that simply serves the static files of the SPA demo application.  It is not a part to the SPA Demo but simply a convenience web server to allow you to serve the SPA demo page locally.  All this application does is read a few environmment variables and writes them to a `serverconfig.js` file that the SPA's index.html can load.  You can see that config load by looking in the index.html file itself. This application has no other significance and is only included for convenience of local  development.  The SPA Demo itself is NOT a node.js application.  It is a set of static html, css and js files that can served from any web server.

@@ -1,4 +1,4 @@
-## LiveAssist Simple Example Page
+## Live Assist Simple Example Page
 
 This is a basic single file example for how to open a live asssist   session
 You can run this from any http server or even as a local file directly from your browser. 
@@ -34,4 +34,3 @@ The Start Assistance button on this example page is attached to a jQuery click h
 ## Read Remote Env Button
 
 The Read Remote Env button on this example page is attached to a jQuery click handler in the jQuery startup function in main.js.  This click handler fetches the current values of the environment variables from the Remote Environment Server. These are the same environment variables that are needed to initialize WebChat and Live Assist which means, given the env server url and its auth token, you can retrieve everything else you need from the remote environment server.  This is what the Assist SDK does on startup.
-

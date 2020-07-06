@@ -1,4 +1,4 @@
-### Simple html-based examples
+### Simple Html-based Examples
 
 This folder contains simple examples for Web Chat and Co-browse. Refer to the README.md in the 
 folder for more information 

@@ -45,8 +45,8 @@ interpreted as a supported or finished project.
 ### Prerequisites
 
 In order to setup Webchat and Live Assist (video chat and co-browse), the following information is required from MAXIMUS Canada:
-- Agent skill / Reason Code - This is a dedicated queue assigned by Maximus to SBC for the purpose replicating the functionalites of Web Chat and Video Chat.
-- MCAP URL Test and Production url - This is a url (depending on the environment required - test or prod) that is required in the form template in order to gain access to Web Chat or Video Chat. This url will be provided by Maximus when required.
+- Agent skill / Reason Code - This is a dedicated queue assigned by Maximus to SBC for the purpose of replicating the functionalites of Web Chat and Live Assist.
+- MCAP URL - This is a url (depending on the environment required - test or prod) that is required in the form template in order to gain access to Web Chat or Live Assist. This url will be provided by Maximus when required.
 
 
 

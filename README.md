@@ -2,24 +2,10 @@
 
 This project contains examples of how to build web pages that can implement Service BC Multi-Channel Contact centre functions. The three functions demonstrated in this project are:
 - Web Chat - Web Chat is a method for citizens to chat online with an SBC representative to assist in Government Services.
-  * Features
-    * API to show application availability
-    * Initiate a Web Chat session
-  * User
-    * Add link for onboarding to SBC Contact Centre Service
 
 - Live Assist (Video Chat) - Video Chat is a method for citizens to video chat with an SBC representative to assist in Government Services.
-  * Features
-    * API to show application availability
-    * Initiate a Video Chat session
-  * User
-    * Add link for onboarding to SBC Contact Centre Service
+
 - Live Assist (Co-Browse) - Co-Browse is an online function to provide the citizen the ability to share their screen with a SBC representative.
-  * Features
-    * API to show application availability
-    * Initiate a Co-Browse session
-  * User
-    * Add link for onboarding to SBC Contact Centre Service
 
 You can run all these application locally on your computer. Instructions for doing so are included in the `README.MD` file included in each sub-project.  No special infrastructure or software is required. They can all be run using readily available free software, well-known to all web developers, such as Visual Studio Code, node.js, etc.  Most of the example applications can be run directly from a browser with no additional software at all.
 

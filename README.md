@@ -54,7 +54,7 @@ Q. Is there a public facing server that hosts the MCAP Demo SPA where I can prev
  https://mcap-dev.pathfinder.gov.bc.ca/ <br>
  Please note that this is a demo site only and the contents may change without notice as code is modified or features added.  
 
-Q. What do I need to write my own MCAP-cabable pages or apps
+Q. What do I need to write my own MCAP-capable pages or apps
 
 >You will need a computer, of course, and your code editing software of choice, such as Microsoft Visual Studio Code, installed. You will need Git if you want to clone this project. You should  have node.js available if you want to run the Demo SPA application with its built-in web server. More specific details on what libraries you need for each MCAP function is included in the example folder for each function
 

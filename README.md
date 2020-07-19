@@ -66,3 +66,6 @@ Q. How do I determine the "hours of operation" of the webchat & live assist serv
 
 >Hours of Operation are determined by a single Web Service call.  An example of this is shown in the Live Assist example code.  The `SPA_ENV_MCAP_MAINTENANCE_FLAG` variable returned from that server determines if services are open.  This feature will be updated in future web service releases to include more granular hours of operation information.
 
+Q. What is that `openshift` directory for?
+
+>That just contains some deployment file needed to deploy the MCAP Demo page to an OpenShift server.  You can mostly ignore it unless you are interested in deploying to OpenShift.

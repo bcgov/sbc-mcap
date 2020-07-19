@@ -38,7 +38,7 @@ In order to setup Web Chat or Live Assist (Video Chat and Co-Browse), the follow
 
 Q. What platforms, operating systems or servers will I need to host my own page that uses the MCAP functions (web chat and/or live assist)?
 
->There is no specific requirement for the web environment on which you can host your own MCAP-capable pages.  All you need is a system to serve web pages to the user.  Commonly used platforms are Apache Web Server, NGinx or even IIS.  You can even write your own web server such as in the Demo SPA, whivh uses its own node.js
+>There is no specific requirement for the web environment on which you can host your own MCAP-capable pages.  All you need is a system to serve web pages to the user.  Commonly used platforms are Apache Web Server, NGinx or even IIS.  You can even write your own web server such as in the Demo SPA, which includes its own server written in node.js
 
 Q. What platforms, operating systems or servers does the MCAP Single Page App run under?
 
@@ -46,14 +46,23 @@ Q. What platforms, operating systems or servers does the MCAP Single Page App ru
 
 Q. So do I need to run a node.js server in order to write or host my own MCAP pages?
 
->No.  The SPA is simply an example of writing your own web server to serve an MCAP page.  This is just one of several possible methods to initialize the required url's and keys needed for an MCAP page. The other examples in this repository do not include a built in web server and would need to be hosted on one.
+>No. The SPA is simply an example of writing your own web server to serve an MCAP page. This is just one of several possible methods to initialize the required url's and keys needed for an MCAP page. The other examples in this repository do not include a built in web server and would need to be hosted on one.
 
-Q. is there a public facing server that hosts the MCAP Demo SPA where I can preview it?
+Q. Is there a public facing server that hosts the MCAP Demo SPA where I can preview it?
 
 >There is a copy of the MCAP Demo SPA ruuning here <br>
  https://mcap-dev.pathfinder.gov.bc.ca/ <br>
- Please note that this is a demo site only and the contents may change without notice as code is modified or features are changed or added.  
+ Please note that this is a demo site only and the contents may change without notice as code is modified or features added.  
 
+Q. What do I need to write my own MCAP-cabable pages or apps
 
+>You will need a computer, of course, and your code editing software of choice, such as Microsoft Visual Studio Code, installed. You will need Git if you want to clone this project. You should  have node.js available if you want to run the Demo SPA application with its built-in web server. More specific details on what libraries you need for each MCAP function is included in the example folder for each function
 
+Q. How do I create a web page that has the WebChat or Live Assist function ?
+
+>The best place to start would be with the code in the examples directory of this repository. They are stripped down pages with little more than the essentials needed for each function.  You can modify those pages and add your own content.
+
+Q. How do I determine the "hours of operation" of the webchat & live assist services?
+
+>Hours of Operation are determined by a single Web Service call.  An example of this is shown in the Live Assist example code.  The "SPA_ENV_MCAP_MAINTENANCE_FLAG" variable returned from that server determines if services are open or closed with "true" meaning "closed".  This feature will be updated in future web service releases to include more granular hours of operation information.
 

@@ -7,13 +7,6 @@ This project contains examples of how to build web pages that can implement Serv
 
 - Live Assist (Co-Browse) - Co-Browse is an online function to provide the citizen the ability to share their screen with a SBC representative.
 
-<iframe id="MCAPDemo"
-    title="MCAP Demo SPA"
-    width="300"
-    height="200"
-    src="https://mcap-dev.pathfinder.gov.bc.ca/">
-</iframe>
-
 You can run all these application locally on your computer. Instructions for doing so are included in the `README.MD` file included in each sub-project.  No special infrastructure or software is required. They can all be run using readily available free software, well-known to all web developers, such as Visual Studio Code, node.js, etc.  Most of the example applications can be run directly from a browser with no additional software at all.
 
 All of the example pages contained herein require familiarity with web page development including html, css and javascript.  Familiarity with the JQuery javascript library would be very useful as well as some minimal understanding of Bootstrap CSS, although that is not as important unless you want to modify the look and feel of the underlying controls.
@@ -43,22 +36,24 @@ In order to setup Web Chat or Live Assist (Video Chat and Co-Browse), the follow
 
 ### FREQUENTLY ASKED QUESTIONS (FAQ) 
 
-Q. What platforms, operating systems or servers would I need to have my own page that uses MCAP (web chat and/or live assist)?
+Q. What platforms, operating systems or servers will I need to host my own page that uses the MCAP functions (web chat and/or live assist)?
 
->There is no specific requirement for the environment on which you can host your own MCAP-capable pages.  All that it needed is a system that can serve web pages to the user.  Examples would be Apache Web Server, NGinx or even IIS.
+>There is no specific requirement for the web environment on which you can host your own MCAP-capable pages.  All you need is a system to serve web pages to the user.  Commonly used platforms are Apache Web Server, NGinx or even IIS.  You can even write your own web server such as in the Demo SPA, whivh uses its own node.js
 
 Q. What platforms, operating systems or servers does the MCAP Single Page App run under?
 
->The SPA is a node.js app and will run on any computer or server with node.js installed.  
+>The SPA has its own built-in web server and runs as a node.js app.  It will run on any system with node.js available.  
 
-Q. Do i need to run a node.js server in order to write or run my own MCAP pages?
+Q. So do I need to run a node.js server in order to write or host my own MCAP pages?
 
->No.  As described in the Demo SPA README, node.js is only used in the SPA to initialize some environment settings for the SPA before it loads, but is not needed to write or run your own MCAP page.  The SPA is using just one of several possible methods to initialize the required url's and keys needed for an MCAP page
+>No.  The SPA is simply an example of writing your own web server to serve an MCAP page.  This is just one of several possible methods to initialize the required url's and keys needed for an MCAP page. The other examples in this repository do not include a built in web server and would need to be hosted on one.
 
-
-
-Q. is there a public facing server that hosts the MCAP Demo SPA so I can preview it?
+Q. is there a public facing server that hosts the MCAP Demo SPA where I can preview it?
 
 >There is a copy of the MCAP Demo SPA ruuning here <br>
- https://mcap-dev.pathfinder.gov.bc.ca/
+ https://mcap-dev.pathfinder.gov.bc.ca/ <br>
+ Please note that this is a demo site only and the contents may change without notice as code is modified or features are changed or added.  
+
+
+
 

@@ -46,7 +46,7 @@ Q. What platforms, operating systems or servers does the MCAP Single Page App ru
 
 Q. So do I need to run a node.js server in order to write or host my own MCAP pages?
 
->No. The SPA is simply an example of writing your own web server to serve an MCAP page. This is just one of several possible methods to initialize the required url's and keys needed for an MCAP page. The other examples in this repository do not include a built in web server and would need to be hosted on one.
+>No. The SPA is simply an example of writing your own web server to serve an MCAP page. It also shows just one of several possible ways to initialize the required url's and keys needed for an MCAP page. The other examples in this repository do not include a built-in web server and would need to be hosted on one.
 
 Q. Is there a public facing server that hosts the MCAP Demo SPA where I can preview it?
 
@@ -64,5 +64,5 @@ Q. How do I create a web page that has the WebChat or Live Assist function ?
 
 Q. How do I determine the "hours of operation" of the webchat & live assist services?
 
->Hours of Operation are determined by a single Web Service call.  An example of this is shown in the Live Assist example code.  The "SPA_ENV_MCAP_MAINTENANCE_FLAG" variable returned from that server determines if services are open or closed with "true" meaning "closed".  This feature will be updated in future web service releases to include more granular hours of operation information.
+>Hours of Operation are determined by a single Web Service call.  An example of this is shown in the Live Assist example code.  The `SPA_ENV_MCAP_MAINTENANCE_FLAG` variable returned from that server determines if services are open.  This feature will be updated in future web service releases to include more granular hours of operation information.
 

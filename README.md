@@ -36,6 +36,11 @@ In order to setup Web Chat or Live Assist (Video Chat and Co-Browse), the follow
 
 ### FREQUENTLY ASKED QUESTIONS (FAQ) 
 
+Q. What access information do I need to setup Web Chat and Live Assist?
+
+>An Agent skill and an MCAP URL is required. The Agent skill is a dedicated queue assigned by Maximus to SBC for the purpose of replicating the functionalities of Web Chat and Live Assist. The MCAP URL (depending on the environment required - test or prod) is a url required in the form template in order to gain access to Web Chat or Live Assist. 
+The Agent skill and MCAP URL will be provided by Maximus upon request.
+
 Q. What platforms, operating systems or servers will I need to host my own page that uses the MCAP functions (Web Chat and/or Live Assist)?
 
 >There is no specific requirement for the web environment on which you can host your own MCAP-capable pages.  All you need is a system to serve web pages to the user.  Commonly used platforms are Apache Web Server, NGinx or even IIS.  You can even write your own web server such as in the Demo SPA, which includes its own server written in node.js.
@@ -66,6 +71,6 @@ Q. How do I determine the "hours of operation" of the Web Chat & Live Assist ser
 
 >Hours of Operation are determined by a single Web Service call.  An example of this is shown in the Live Assist example code.  The `SPA_ENV_MCAP_MAINTENANCE_FLAG` variable returned from that server determines if services are open.  This feature will be updated in future web service releases to include more granular hours of operation information.
 
-Q. What is that `openshift` directory for?
+Q. What is the `openshift` directory for?
 
->That just contains some deployment file needed to deploy the MCAP Demo page to an OpenShift server.  You can mostly ignore it unless you are interested in deploying to OpenShift.
+>It contains some deployment file needed to deploy the MCAP Demo page to an OpenShift server.  You can mostly ignore it unless you are interested in deploying to OpenShift.

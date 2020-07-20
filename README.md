@@ -38,8 +38,8 @@ In order to setup Web Chat or Live Assist (Video Chat and Co-Browse), the follow
 
 Q. What access information do I need to setup Web Chat and Live Assist?
 
->An Agent skill and an MCAP URL is required. The Agent skill is a dedicated queue assigned by Maximus to SBC for the purpose of replicating the functionalities of Web Chat and Live Assist. The MCAP URL (depending on the environment required - test or prod) is a url required in the form template in order to gain access to Web Chat or Live Assist. 
-The Agent skill and MCAP URL will be provided by Maximus upon request.
+>An Agent skill and an MCAP URL is required. The Agent skill is a dedicated queue assigned by Maximus to other ministries for the purpose of replicating the functionalities of Web Chat and Live Assist. The MCAP URL (depending on the environment required - test or prod) is a url required in the form template in order to gain access to Web Chat or Live Assist. 
+The Agent skill and MCAP URL will be provided by Maximus Canada upon request.
 
 Q. What platforms, operating systems or servers will I need to host my own page that uses the MCAP functions (Web Chat and/or Live Assist)?
 

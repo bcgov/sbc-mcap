@@ -36,11 +36,6 @@ In order to setup Web Chat or Live Assist (Video Chat and Co-Browse), the follow
 
 ### FREQUENTLY ASKED QUESTIONS (FAQ) 
 
-Q. What access information do I need to setup Web Chat and Live Assist?
-
->An Agent skill and an MCAP URL is required. The Agent skill is a dedicated queue assigned by Maximus to other ministries for the purpose of replicating the functionalities of Web Chat and Live Assist. The MCAP URL (depending on the environment required - test or prod) is a url required in the form template in order to gain access to Web Chat or Live Assist. 
-The Agent skill and MCAP URL will be provided by Maximus Canada upon request.
-
 Q. What platforms, operating systems or servers will I need to host my own page that uses the MCAP functions (Web Chat and/or Live Assist)?
 
 >There is no specific requirement for the web environment on which you can host your own MCAP-capable pages.  All you need is a system to serve web pages to the user.  Commonly used platforms are Apache Web Server, NGinx or even IIS.  You can even write your own web server such as in the Demo SPA, which includes its own server written in node.js.
@@ -66,6 +61,11 @@ Q. What do I need to write my own MCAP-capable pages or apps?
 Q. How do I create a web page that has the Web Chat or Live Assist function?
 
 >The best place to start would be with the code in the examples directory of this repository. They are stripped down pages with little more than the essentials needed for each function.  You can modify those pages and add your own content.
+
+Q. What access information do I need to setup Web Chat and Live Assist?
+
+>An Agent skill and an MCAP URL is required. The Agent skill is a dedicated queue assigned by Maximus to other ministries for the purpose of replicating the functionalities of Web Chat and Live Assist. The MCAP URL (depending on the environment required - test or prod) is a url required in the form template in order to gain access to Web Chat or Live Assist. 
+The Agent skill and MCAP URL will be provided by Maximus Canada upon request.
 
 Q. How do I determine the "hours of operation" of the Web Chat & Live Assist services?
 

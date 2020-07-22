@@ -67,6 +67,10 @@ Q. What access information do I need to setup Web Chat and Live Assist?
 >An Agent skill and an MCAP URL is required. The Agent skill is a dedicated queue assigned by Maximus to other ministries for the purpose of replicating the functionalities of Web Chat and Live Assist. The MCAP URL (depending on the environment required - test or prod) is a url required in the form template in order to gain access to Web Chat or Live Assist. 
 The Agent skill and MCAP URL will be provided by Maximus Canada upon request.
 
+Q. Who can use this functionality?
+
+>---Link to onboarding to SBC Contact Center Services
+
 Q. How do I determine the "hours of operation" of the Web Chat & Live Assist services?
 
 >Hours of Operation are determined by a single Web Service call.  An example of this is shown in the Live Assist example code.  The `SPA_ENV_MCAP_MAINTENANCE_FLAG` variable returned from that server determines if services are open.  This feature will be updated in future web service releases to include more granular hours of operation information.

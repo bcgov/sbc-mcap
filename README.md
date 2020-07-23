@@ -39,4 +39,4 @@ interpreted as a supported or finished project.
 
 ### FREQUENTLY ASKED QUESTIONS (FAQ) 
 
-Visit the Service BC MCAP Wiki Page to view the Frequently asked questions (FAQ) https://github.com/bcgov/sbc-mcap/wiki/Welcome-to-the-Service-BC-MCAP-Wiki-Page
+Visit the Service BC MCAP Wiki Page to view the Frequently asked questions (FAQ) https://github.com/bcgov/sbc-mcap/wiki/Service-BC-MCAP-Frequently-Asked-Questions-(FAQ)

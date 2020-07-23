@@ -39,45 +39,4 @@ interpreted as a supported or finished project.
 
 ### FREQUENTLY ASKED QUESTIONS (FAQ) 
 
-Q. What platforms, operating systems or servers will I need to host my own page that uses the MCAP functions (Web Chat and/or Live Assist)?
-
->There is no specific requirement for the web environment on which you can host your own MCAP-capable pages.  All you need is a system to serve web pages to the user.  Commonly used platforms are Apache Web Server, NGinx or even IIS.  You can even write your own web server such as in the Demo SPA, which includes its own server written in node.js.
-
-Q. What platforms, operating systems or servers does the MCAP SPA run under?
-
->The Single Page App has its own built-in web server and runs as a node.js app.  It will run on any system with node.js available.  
-
-Q. So do I need to run a node.js server in order to write or host my own MCAP pages?
-
->No. The SPA is simply an example of writing your own web server to serve an MCAP page. It also shows just one of several possible ways to initialize the required url's and keys needed for an MCAP page. The other examples in this repository do not include a built-in web server and would need to be hosted on one.
-
-Q. Is there a public facing server that hosts the MCAP Demo SPA where I can preview it?
-
->There is a copy of the MCAP Demo SPA ruuning here <br>
- https://mcap-dev.pathfinder.gov.bc.ca/ <br>
- Please note that this is a demo site only and the contents may change without notice as code is modified or features added.  
-
-Q. What do I need to write my own MCAP-capable pages or apps?
-
->You will need a computer and your choice of code editing software, such as Microsoft Visual Studio Code installed. You will need Git if you want to clone this project. You should have node.js available if you want to run the Demo SPA application with its built-in web server or want to write your own server code. More specific details on what libraries you need for each MCAP function is included in the example folder for each function.
-
-Q. How do I create a web page that has the Web Chat or Live Assist function?
-
->The best place to start would be with the code in the examples directory of this repository. They are stripped down pages with little more than the essentials needed for each function.  You can modify those pages and add your own content.
-
-Q. What access information do I need to setup Web Chat and Live Assist?
-
->An Agent skill and an MCAP URL is required. The Agent skill is a dedicated queue assigned by Maximus to other ministries for the purpose of replicating the functionalities of Web Chat and Live Assist. The MCAP URL (depending on the environment required - test or prod) is a url required in the form template in order to gain access to Web Chat or Live Assist. 
-The Agent skill and MCAP URL will be provided by Maximus Canada upon request.
-
-Q. Who can use this functionality?
-
->---Link to onboarding to SBC Contact Center Services
-
-Q. How do I determine the "hours of operation" of the Web Chat & Live Assist services?
-
->Hours of Operation are determined by a single Web Service call.  An example of this is shown in the Live Assist example code.  The `SPA_ENV_MCAP_MAINTENANCE_FLAG` variable returned from that server determines if services are open.  This feature will be updated in future web service releases to include more granular hours of operation information.
-
-Q. What is the `openshift` directory for?
-
->It contains some deployment file needed to deploy the MCAP Demo page to an OpenShift server.  You can mostly ignore it unless you are interested in deploying to OpenShift.
+Visit the Service BC MCAP Wiki Page to view the Frequently asked questions (FAQ) https://github.com/bcgov/sbc-mcap/wiki

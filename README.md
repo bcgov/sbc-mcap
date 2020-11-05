@@ -27,7 +27,7 @@ All of the example pages contained herein require familiarity with web page deve
   #### Simple html-based examples (src/examples)
   There are two simplified example applications:
   - Web Chat
-  - Live Assist (both Video Chat and Co-Browse)
+  - CoBrowse (currently under development)
 
 Both of these example sub-projects contain the minimal html/css/javascript required to implement each of the MCAP functions they demonstrate.  These examples do not require node.js or any other infrastructure to run.  They can be run directly from a browser or placed on any web server and used directly.  For more information please refer to the `README.MD` in each sub-project.
 

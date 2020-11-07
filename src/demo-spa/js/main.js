@@ -10,7 +10,7 @@ var envVars = {
 };
 
 $(function () {
-  // Hide maintenance section on staty
+  // Hide maintenance section on start
   $("div#maintenance").hide();
 
   // console.log('ChatServicesUrl=' + chatServicesUrl);

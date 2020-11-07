@@ -29,7 +29,7 @@ app.use("/cobrowse", express.static(__dirname + '/../examples/cobrowse'));
 
 console.log(__dirname + '/../examples/webchat');
 
-// Read the required items from the OS environment
+// Read the required items from environment. OS env overrides .env file
 const configObj = {
   cobrowse_url: process.env.COBROWSE_URL,
   webchat_url: process.env.CHAT_SERVICES_URL,

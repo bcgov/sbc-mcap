@@ -26,7 +26,6 @@ app.use("/icons", express.static(__dirname + '/icons'));
 app.use("/images", express.static(__dirname + '/images'));
 app.use("/webchat", express.static(__dirname + '/../examples/webchat'));
 app.use("/cobrowse", express.static(__dirname + '/../examples/cobrowse'));
-app.use(express.static(__dirname + '/config'));
 
 console.log(__dirname + '/../examples/webchat');
 
@@ -39,18 +38,12 @@ const configObj = {
   spaenv_auth: 'spaenv ' + process.env.SPA_ENV
 };
 
-// Write this object to a js file so it can be included by index.html. Note this is totally optional 
-// when you write your own page.  You can get access to these items in various ways.  See 
-// the simplified examples for more 
-// fs.writeFileSync(
-//   `${__dirname}/config/serverconfig.js`, 'var serverConfig = ' + JSON.stringify(configObj), 'utf-8'
-// );
-
 // used to send test/prod specific config to client
 app.get('/api/env', function (req, res) {
   res.end(JSON.stringify(configObj));
 });
 
+// send web page to client
 app.get('/', function (req, res) {
   res.sendFile('/index.html');
 });

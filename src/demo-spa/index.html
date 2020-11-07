@@ -643,6 +643,7 @@
             </div>
 
             <div class="row">
+              <!-- Web Chat -->
               <div class="col-sm-4 sbc-section" id="live-chat">
                 <div
                   class="thumbnail"
@@ -690,7 +691,7 @@
                     <h3 class="sbc-title">Live Chat</h3>
                     <!-- <p><span class="badge">New!</span> Having trouble with an online form or service? Let our agents help guide you through the process in browser. No downloads or installs required – just click chat! If you really need help, our agents can co-browse with you to ensure all your needs are met.</p> -->
                     <p>
-                      <span class="badge">New!</span> Haviddng trouble with an
+                      <span class="badge">New!</span> Having trouble with an
                       online form or service? Let our agents help guide you
                       through the process in browser. No downloads or installs
                       required – just click chat! Our agents can co-browse with
@@ -713,10 +714,12 @@
                 <div class="collapse" id="collapseChat">
                   <div class="well">
                     <form
-                      target="print_popup"
-                      onsubmit="window.open('about:blank','print_popup','width=400,height=400');"
+                      id="webchat"
+                      target="webchat_window"
                       method="post"
                       class="form-horizontal chatpopup"
+                      action="https://testchatservices.maximusbc.ca/Home/Chat"
+                      onSubmit="window.open('about:blank','webchat_window','width=400,height=400');"
                     >
                       <div class="form-group hidden">
                         <label class="col-sm-2 control-label">Reason</label>
@@ -732,11 +735,7 @@
                       </div>
 
                       <input type="hidden" name="UserLanguage" value="en" />
-                      <input
-                        type="hidden"
-                        name="Parameters[TimeZoneOffset]"
-                        value="8"
-                      />
+                      <!-- <input type="hidden" name="Parameters[TimeZoneOffset]" value="8" /> -->
                       <button
                         type="submit"
                         class="btn btn-primary btn-block btn-lg"

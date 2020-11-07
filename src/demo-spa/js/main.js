@@ -1,14 +1,15 @@
-var EXPAND_CLASS = 'expanded';
+var EXPAND_CLASS = "expanded";
 var MOBILE_MAX_WIDTH = 767; //px
 
 chatServicesUrl = "";
 
 var envVars = {
-  "SPA_ENV_MCAP_MAINTENANCE_FLAG": "", "SPA_ENV_MCAP_MAINTENANCE_MESSAGE": "",
-  "SPA_ENV_MCAP_ASSISTJS_URL": "", "SPA_ENV_MCAP_VIDEO_ASSIST_URL": "",
-  "SPA_ENV_MCAP_CHAT_SERVICES_URL": "", "SPA_ENV_MCAP_AGENT_ID": ""
+  SPA_ENV_MCAP_MAINTENANCE_FLAG: "",
+  SPA_ENV_MCAP_MAINTENANCE_MESSAGE: "",
+  SPA_ENV_MCAP_ASSISTJS_URL: "",
+  SPA_ENV_MCAP_CHAT_SERVICES_URL: "",
+  SPA_ENV_MCAP_AGENT_ID: "",
 };
-
 
 $(function () {
   // Hide maintenance section on staty
@@ -16,47 +17,46 @@ $(function () {
 
   // console.log('ChatServicesUrl=' + chatServicesUrl);
 
-  $(".chatpopup").attr('action', chatServicesUrl);
-
-  $('#main-content .collapse').on('show.bs.collapse', onExpandSection);
+  if (chatServicesUrl) {
+    $(".chatpopup").attr("action", chatServicesUrl);
+  }
+  $("#main-content .collapse").on("show.bs.collapse", onExpandSection);
 
   // Close collapsible sections when clicking outside.
-  $('body').on('click', function () {
-
+  $("body").on("click", function () {
     //Improvement: Only do for desktop? Check MOBILE_MAX_WIDTH?
-    $('#main-content .collapse.in').collapse('hide');
+    $("#main-content .collapse.in").collapse("hide");
   });
 
-  $('#main-content .collapse').on('click', function (e) {
+  $("#main-content .collapse").on("click", function (e) {
     console.log("dropdown body clicked");
     e.stopPropagation();
 
-    //Don't stop event if it's form submission
+    //Don't stop event if it's form  fission
     if (e.target.type === "submit") return true;
     if (e.target.href) return true;
     return false;
   });
-
-
-
 });
 
 function readEnvironment() {
-  console.log('Loading Environment from ENV_SERVER');
+  console.log("Loading Environment from ENV_SERVER");
 
   var request = $.ajax({
     type: "POST",
     beforeSend: function (request) {
-      request.setRequestHeader("Authorization", serverConfig.authorizationToken);
+      request.setRequestHeader(
+        "Authorization",
+        serverConfig.authorizationToken
+      );
       request.setRequestHeader("SPA_ENV_NAME", JSON.stringify(envVars));
     },
     url: serverConfig.spaEnvServerURL,
-    processData: false
+    processData: false,
   });
 
   request.done(function (msg) {
-
-    // Comment these lines if you don't want this logged 
+    // Comment these lines if you don't want this logged
     console.log(msg);
     console.log("Maintenance: " + msg.SPA_ENV_MCAP_MAINTENANCE_FLAG);
     console.log("Chat services: " + msg.SPA_ENV_MCAP_CHAT_SERVICES_URL);
@@ -68,7 +68,7 @@ function readEnvironment() {
     //     $("div#maintenance").show();
     //     $("#maintNotice").text(msg.SPA_ENV_MCAP_MAINTENANCE_MESSAGE);
     // }
-    // else 
+    // else
     {
       assistjs_url = msg.SPA_ENV_MCAP_ASSISTJS_URL;
       chatServicesUrl = msg.SPA_ENV_MCAP_CHAT_SERVICES_URL;
@@ -87,14 +87,15 @@ function readEnvironment() {
   });
 }
 
-
-
 function scrollTo($el, scrollTime) {
   if (!scrollTime) scrollTime = 500;
   setTimeout(function () {
-    $('html, body').animate({
-      scrollTop: $el.offset().top - 75
-    }, scrollTime);
+    $("html, body").animate(
+      {
+        scrollTop: $el.offset().top - 75,
+      },
+      scrollTime
+    );
   }, 250);
 }
 
@@ -104,29 +105,28 @@ function onExpandSection() {
   // console.log("expand");
 
   //Close all others
-  if ($('#main-content .collapse.in').length) {
-    $('#main-content .collapse').collapse('hide');
+  if ($("#main-content .collapse.in").length) {
+    $("#main-content .collapse").collapse("hide");
   }
 
   //Full width
-  var position = $('#main-content').position().left - $(this).position().left;
+  var position = $("#main-content").position().left - $(this).position().left;
   var position = position + 45; //account for #main-content padding
-  var baseWidth = parseInt($('#main-content').css('width'), 10);
+  var baseWidth = parseInt($("#main-content").css("width"), 10);
   var width = baseWidth - position;
-  $(this).css('width', width);
+  $(this).css("width", width);
 
   //Start on left matching #main-content
   if ($(window).width() > MOBILE_MAX_WIDTH) {
-    var mainOffset = $('#main-content').offset().left;
+    var mainOffset = $("#main-content").offset().left;
     // let dataParent = $(this).attr('data-parent');
-    var parent = $(this).parents('.sbc-section');
+    var parent = $(this).parents(".sbc-section");
     if (parent.length) {
-      var parentOffset = $(this).parents('.sbc-section').offset().left;
+      var parentOffset = $(this).parents(".sbc-section").offset().left;
       // var parentOffset = dataParent ? $(dataParent).offset().left  : $(this).parents('.sbc-section').offset().left
       var offset = mainOffset - parentOffset;
       offset += 15; //account for padding
-      $(this).css('left', offset);
+      $(this).css("left", offset);
     }
   }
-
 }

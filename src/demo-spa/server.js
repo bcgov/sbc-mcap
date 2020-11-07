@@ -1,5 +1,6 @@
 const express = require("express");
 const fs = require('fs');
+require('dotenv').config();
 /*=============================================================================
 All this node.js application does is save config items from the OS environment 
 to ./config/serverconfig.js on startup so the demo web page can include that
@@ -14,6 +15,8 @@ as done in the /example files. They do not use the config file.
 const app = express();
 const SERVICE_PORT = process.env.SERVICE_PORT || 8080;
 
+console.log(process.env.CHAT_SERVICES_URL);
+
 // This app just serves static file
 app.use("/", express.static(__dirname + '/'));
 app.use("/js", express.static(__dirname + '/js'));
@@ -25,16 +28,15 @@ app.use("/webchat", express.static(__dirname + '/../examples/webchat'));
 app.use("/cobrowse", express.static(__dirname + '/../examples/cobrowse'));
 app.use(express.static(__dirname + '/config'));
 
-console.log(__dirname + '/../examples/webchat' );
-
+console.log(__dirname + '/../examples/webchat');
 
 // Read the required items from the OS environment
 const configObj = {
-  AssistJSUrl: process.env.ASSISTJS_URL,
-  ChatServicesUrl: process.env.CHAT_SERVICES_URL,
+  cobrowse_url: process.env.COBROWSE_URL,
+  webchat_url: process.env.CHAT_SERVICES_URL,
+  spaenv_url: process.env.SPA_ENV_SERVER_URL,
   agentId: process.env.AGENT_ID,
-  spaEnvServerURL: process.env.SPA_ENV_SERVER_URL,
-  authorizationToken: 'spaenv ' + process.env.SPA_ENV_AUTH_TOKEN
+  spaenv_auth: 'spaenv ' + process.env.SPA_ENV
 };
 
 // Write this object to a js file so it can be included by index.html. Note this is totally optional 
@@ -43,6 +45,11 @@ const configObj = {
 // fs.writeFileSync(
 //   `${__dirname}/config/serverconfig.js`, 'var serverConfig = ' + JSON.stringify(configObj), 'utf-8'
 // );
+
+// used to send test/prod specific config to client
+app.get('/api/env', function (req, res) {
+  res.end(JSON.stringify(configObj));
+});
 
 app.get('/', function (req, res) {
   res.sendFile('/index.html');

@@ -13,8 +13,6 @@
 			],
 			"program": "${workspaceFolder}/src/demo-spa/index.js",
 			"env": {
-				"ASSISTJS_URL": "remote-js/assist.js",
-				"VIDEO_ASSIST_URL": "https://video-poc1.maximusbc.ca",
 				"CHAT_SERVICES_URL": "https://testchatservices.maximusbc.ca/Home/Chat",
 				"AGENT_ID": "sip:7783727966@aaa.qaz",
 				"SPA_ENV_AUTH_TOKEN": "5993117a-2384-4b70-ad42-1e9b9e6044d9",

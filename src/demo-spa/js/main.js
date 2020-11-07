@@ -93,6 +93,7 @@ function initAll() {
     });
 
     $('#main-content .collapse').on('click', function (e) {
+      console.log("collapse");
         e.stopPropagation();
         //Don't stop event if it's form submission
         if (e.target.type === "submit") return true;

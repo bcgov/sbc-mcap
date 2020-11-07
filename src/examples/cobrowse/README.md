@@ -5,9 +5,7 @@ You can run this from any http server or even as a local file directly from your
 
 To use:
 1. Open index.html with your browser
-2. Click the "Start Web Chat" button
-3. Select "Call Support and then share" for Video Chat
-4. Select "Already on the call, want to share" for Co-Browse
+2. Click the "Start CoBrowse" icon
 
 The file `index.html` is the `"hello world"` equivalent of a CoBrowse.  It contains the bare minimum to open up a CoBrowse dialog in a 'popup' frame.  In this file is a single button with a jQuery `click` listener to which will bring up the CoBrowse dialog. This dialog is identical to that displayed in the SPA Demo page and is built into the example SDK.  The asociated `index.js` file is loaded by `index.html` and handles initialization of CoBrowse as well as the `click` handler on the button. 
 

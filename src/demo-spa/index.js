@@ -40,9 +40,10 @@ const configObj = {
 // Write this object to a js file so it can be included by index.html. Note this is totally optional 
 // when you write your own page.  You can get access to these items in various ways.  See 
 // the simplified examples for more 
-fs.writeFileSync(
-  `${__dirname}/config/serverconfig.js`, 'var serverConfig = ' + JSON.stringify(configObj), 'utf-8'
-);
+// fs.writeFileSync(
+//   `${__dirname}/config/serverconfig.js`, 'var serverConfig = ' + JSON.stringify(configObj), 'utf-8'
+// );
+
 app.get('/', function (req, res) {
   res.sendFile('/index.html');
 });

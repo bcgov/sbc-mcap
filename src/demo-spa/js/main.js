@@ -6,9 +6,7 @@ chatServicesUrl = "";
 var envVars = {
   SPA_ENV_MCAP_MAINTENANCE_FLAG: "",
   SPA_ENV_MCAP_MAINTENANCE_MESSAGE: "",
-  SPA_ENV_MCAP_ASSISTJS_URL: "",
-  SPA_ENV_MCAP_CHAT_SERVICES_URL: "",
-  SPA_ENV_MCAP_AGENT_ID: "",
+  SPA_ENV_MCAP_CHAT_SERVICES_URL: ""
 };
 
 $(function () {

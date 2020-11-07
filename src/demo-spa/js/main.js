@@ -101,7 +101,7 @@ function scrollTo($el, scrollTime) {
 function onExpandSection() {
   //1. Make sure it's full-width (for desktop breakpoints)
   //2. Make sure it starts at the left (matching #main-content)
-  var $el = $(this);
+  // console.log("expand");
 
   //Close all others
   if ($('#main-content .collapse.in').length) {
@@ -130,25 +130,3 @@ function onExpandSection() {
   }
 
 }
-
-
-/**
- * Deletes ALL local storage and returns to a pristie state.
- *
- * This deletes all Live-Assist sessions, meaning they can no longer be
- * restored, but it also likely reduces runtime bugs. Useful for demo, but will
- * likely need a gentler touch for a production solution.
- */
-function clearAllStorageData() {
-  if (localStorage) {
-    localStorage.clear();
-  }
-
-  if (sessionStorage) {
-    sessionStorage.clear();
-  }
-}
-
-// function enableCoBrowseUI(){
-
-// }

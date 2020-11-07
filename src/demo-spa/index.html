@@ -296,11 +296,12 @@
 
             </div>
 
+            <!-- Text Message -->
             <div class="col-sm-4 sbc-section" id='text'>
               <div class="thumbnail" data-toggle="collapse" href="#collapseText" aria-expanded="false"
                 aria-controls="collapseText">
                 <svg version="1.1" class='sbc-svg 
-                                        sbc-svg-text' id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                  sbc-svg-text' id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
                   style="enable-background:new 0 0 512 512;" xml:space="preserve">
                   <g>
@@ -323,9 +324,6 @@
                   </g>
 
                 </svg>
-
-
-
 
                 <div class="caption">
                   <h3 class='sbc-title'>Text</h3>
@@ -491,7 +489,7 @@
                 <div class="caption">
                   <h3 class='sbc-title'>Live Chat</h3>
                   <!-- <p><span class="badge">New!</span> Having trouble with an online form or service? Let our agents help guide you through the process in browser. No downloads or installs required – just click chat! If you really need help, our agents can co-browse with you to ensure all your needs are met.</p> -->
-                  <p><span class="badge">New!</span> Having trouble with an online
+                  <p><span class="badge">New!</span> Haviddng trouble with an online
                     form or service? Let our agents help guide you through the
                     process in browser. No downloads or installs required – just
                     click chat! Our agents can co-browse with you to ensure all
@@ -527,26 +525,52 @@
               </div>
             </div>
 
-            <div class="col-sm-4 sbc-section js-cobrowse" id='cobrowse'>
-              <div class="thumbnail">
+            <!-- CoBrowse -->
+            <div class="col-sm-4 sbc-section" id='cobrowse'>
+              <div class="thumbnail" data-toggle="collapse" href="#collapseChat" aria-expanded="false"
+                aria-controls="collapseChat">
+
                 <img src="icons/sbc/cobrowse.png" alt="cobrowse" style="width: 85%; object-fit:cover">
 
                 <div class="caption">
                   <h3 class='sbc-title'>CoBrowse</h3>
+                  <!-- <p><span class="badge">New!</span> Having trouble with an online form or service? Let our agents help guide you through the process in browser. No downloads or installs required – just click chat! If you really need help, our agents can co-browse with you to ensure all your needs are met.</p> -->
                   <p><span class="badge">New!</span> Do you need assistance
                     completing an online form? No problem! CoBrowse lets you
                     share your screen with a live Provincial agent who can assist
                     you with that. You control the session and what is shared</p>
 
-                  <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseText"
-                    aria-expanded="false" aria-controls="collapseText">
+                  <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseChat"
+                    aria-expanded="false" aria-controls="collapseChat">
                     View More
                   </a>
                 </div>
               </div>
 
+              <div class="collapse" id="collapseChat">
+                <div class="well">
+                  <form target="print_popup" onsubmit="window.open('about:blank','print_popup','width=400,height=400');"
+                    method="post" class='form-horizontal chatpopup'>
+                    <div class="form-group hidden">
+                      <label class='col-sm-2 control-label'>Reason</label>
+                      <div class="col-sm-8">
+                        <input type="text" id="Reason" name="Reason" class='form-control' value="SBC_WebChat" />
+                      </div>
+                    </div>
+
+                    <input type="hidden" name="UserLanguage" value="en">
+                    <input type="hidden" name="Parameters[TimeZoneOffset]" value="8">
+                    <button type="submit" class='btn btn-primary btn-block btn-lg'>
+                      <i class="fa fa-check" aria-hidden="true"></i>
+                      Chat
+                    </button>
+
+                  </form>
+                </div>
+              </div>
             </div>
 
+            <!-- Translation Services -->
             <div class="col-sm-4 sbc-section" id='translation-services'>
               <div class="thumbnail" data-toggle="collapse" href="#collapseTranslation" aria-expanded="false"
                 aria-controls="collapseTranslation">
@@ -608,6 +632,7 @@
           </div>
           <div class="row">
 
+            <!-- Translation Services -->
             <div class="col-sm-4 sbc-section" id="in-person">
               <div class="thumbnail" data-toggle="collapse" href="#collapseInPerson" aria-expanded="false"
                 aria-controls="collapseInPerson">

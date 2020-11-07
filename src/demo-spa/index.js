@@ -22,7 +22,7 @@ app.use("/fonts", express.static(__dirname + '/fonts'));
 app.use("/icons", express.static(__dirname + '/icons'));
 app.use("/images", express.static(__dirname + '/images'));
 app.use("/webchat", express.static(__dirname + '/../examples/webchat'));
-app.use("/assist", express.static(__dirname + '/../examples/assist'));
+app.use("/cobrowse", express.static(__dirname + '/../examples/cobrowse'));
 app.use(express.static(__dirname + '/config'));
 
 console.log(__dirname + '/../examples/webchat' );
@@ -31,7 +31,6 @@ console.log(__dirname + '/../examples/webchat' );
 // Read the required items from the OS environment
 const configObj = {
   AssistJSUrl: process.env.ASSISTJS_URL,
-  videoAssistUrl: process.env.VIDEO_ASSIST_URL,
   ChatServicesUrl: process.env.CHAT_SERVICES_URL,
   agentId: process.env.AGENT_ID,
   spaEnvServerURL: process.env.SPA_ENV_SERVER_URL,

@@ -18,9 +18,11 @@ const app = express();
 const SERVICE_PORT = process.env.SERVICE_PORT || 8080;
 const SPA_ENV_URL = process.env.SPA_ENV_URL;
 const SPA_ENV_AUTH = process.env.SPA_ENV_AUTH;
+
 let spaConfig = {
   SPA_ENV_MCAP_COBROWSE_URL: process.env.COBROWSE_URL,
-  SPA_ENV_MCAP_CHAT_SERVICES_URL: process.env.CHAT_SERVICES_URL
+  SPA_ENV_MCAP_CHAT_SERVICES_URL: process.env.CHAT_SERVICES_URL,
+  SPA_COBROWSE_TOKEN: process.env.SPA_COBROWSE_TOKEN
 };
 
 // These directories just serve static file
@@ -49,7 +51,7 @@ axios.post(SPA_ENV_URL, null, config)
     console.log(spaConfig);
   })
   .catch(e => console.log(e.response.status, e.response.statusText, SPA_ENV_URL, config));
-  
+
 
 // used to send test/prod specific config to client
 app.get('/api/env', function (req, res) {

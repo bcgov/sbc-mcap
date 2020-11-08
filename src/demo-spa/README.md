@@ -1,49 +1,38 @@
 # MCAP Single Page Demo App (src/demo-spa)
 
-This sub-project is a Single Page Application (SPA) "Contact Us" page written with JQuery and Bootstrap to demonstrate a full user experience page.  It contains link functions that are the core of MCAP.  Many of the links on this page are just placeholders and have no real functions.  Some familiarity with jQuery and Bootstrap is required to use and modify this SPA. In this readme we will cover how to setup your local environment to edit and run this SPA.  The page will be available at the following local url:<br>
+This sub-project is a Single Page Application (SPA) "Contact Us" page written with JQuery and Bootstrap to demonstrate a full user experience page.  It displays functions that are the core of MCAP.  Many of the links on this page are just placeholders and have no real functionality.  Some familiarity with jQuery and Bootstrap is required to use and modify this SPA. In this readme we will cover how to setup your local environment to edit and run this SPA.  The page will be available at the following local url:<br>
 http://localhost:8080/<br>
 
-This example page requires good familiarity with web page development including html, css and javascript.  This application also makes extensive use of the JQuery javascript library Bootstrap CSS.  You do not need to be an expert in Bootstrap but you should have JQuery experience to understand what it's doing.
+This example page requires familiarity with web page development including html, css and javascript.  This application also makes extensive use of the JQuery javascript library Bootstrap CSS.  You do not need to be an expert in Bootstrap but you should have JQuery experience to understand what it's doing.
 
 ## Installing the Project Locally
 To install this project on your local development environment simple perform the following steps:
-- Ensure you have node.js installed. v10.x or higher is best
+- Ensure you have node.js installed. v12.x or higher is best
 - Clone the MCAP project
 - From the terminal change to the SPA directory: `#cd sbc-mcap/src/demo-spa`
 - Install the required node modules `#npm install`
 - Ensure you have the required enviroment variables set (see below)
-- Run the node app that serves the static pages `#node index.js`
+- Run the node app that serves the static pages `#node server.js`
 
-## Included Web Server Application Description
-`index.js` is a small node.js web server application that simply serves the static files of the SPA demo application.  It is not really a part of the SPA Demo but simply a convenience web server to allow you to serve the SPA demo page locally or on a node.js server.  All this application does is read a few environmment variables and writes them to a `serverconfig.js` file that the SPA's index.html can load.  You can see that config load by looking in the index.html file itself. This application has no other significance and is only included for convenience of local  development.  The SPA Demo itself is NOT a node.js application.  It is a set of static html, css and js files that can be served from any web server.
+*Note: 
+A page with a CoBrowse function MUST be available on the internet to function correctly. If you try to access a cobrowse page on localhost it will not function.  For development purposes you will need to use a proxy such as "ngrok" or "localtunnel" to obtain a temporary public url in order to test the code.  Fortunately this is very easy and both of these are node modules that can be installed using npm or yarn.  For detailed instructons on this refer to the README in the cobrowse example app of this project
+
+## Web Server node Application
+`server.js` is a small node.js web server application that serves the static files of the SPA demo application.  The SPA Demo itself is NOT a node.js application.  It is a set of static html, css and js files that can be served from any web server.  
 
 ## Environment Variables
-If you choose to use the build in node.js app to serve the SPA Demo files you will need to setup a few enviroment variables before running:
+The following environment variables are required by the Demo application:
 
-SKILL_ID = use the Skill ID provided<br>
-SPA_ENV_AUTH_TOKEN = use the auth token provided<br>
-VIDEO_ASSIST_URL = https://video-poc1.maximusbc.ca<br>
-CHAT_SERVICES_URL = https://testchatservices.maximusbc.ca/Home/Chat<br>
-SPA_ENV_SERVER_URL = https://spa-env-server-dev.pathfinder.gov.bc.ca/env<br>
+- COBROWSE_URL = https://testchatservices.maximusbc.ca/Home/Chat
+- COBROWSE_KEY = (your cobrowse key)
+- WEBCHAT_URL = https://t1cobrowse.maximusbc.ca/surfly.js
 
-You can also setup a launch config in your Visual Studio Code IDE to set these environment variables at launch.
-
-If you choose to instead have the SPA Demo pages served by a different web server such as Apache or NGinx you can create your own serverconfig.js file used by index.html. You may need to edit the `<script>` tag within index.html depending on the location of your `serverconfig.js` file.  Alternatively you may wish to have the config variables load some other way.  The implementation is completely up to you as long as there is `serverConfig` object available to the SPA.
-
-## Reading a Remote Environment
-The Environment Variable SPA_ENV_SERVER_URL points to a demo location that will return the above Environment variables needed for the demo.  If you wish you can query this remote location to obtain the current environment variables, including whether the assist server is in maintenance mode or after hours. To see an example of this, look at the readEnvironment() function in main.js
-
-Using a remote Environment means that your app only needs to know the address of the Remove Env server and the Authorization Key needed to query it.  All the other information will be available from the remote server.
-
-This lookup is performed for you in the SDK on startup but you can modify this behavior if needed. Refer to the readEnvironment() function in main.js for more examples of how to do this.
+The demo application uses the `dotenv` node module to read these items from an optional `.env` file if they are not present in the OS environment.  You can also setup a launch config in your Visual Studio Code IDE to set these environment variables at launch.
 
 ## Running the SPA Demo page
-Once you have the static pages available, either  through the development node application or on your own web server, simple browse to the url of the SPA Demo page.  For a localhost setup the url will be http://localhost:8080
+Once you have the static pages available, either through the development node application or on your own web server, browse to the url of the SPA Demo page.  For a localhost setup the url will be http://localhost:8080  or the url provided by your proxy if testing cobrowse features
 
-
-
-<i>Please note the code contained in this project is example code only. This code can be used as a starting 
-point for a developing your own production application but is not intended or expected to be 
+<i>Please note the code contained in this project is example code only. This code can be used as a starting point for a developing your own production application but is not intended or expected to be 
 interpreted as a supported or finished project. </i>
 
 

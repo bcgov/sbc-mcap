@@ -4,7 +4,7 @@ const MOBILE_MAX_WIDTH = 767; //px
 var config = {
   WEBCHAT_URL: "",
   COBROWSE_URL: "",
-  COBROWSE_TOKEN: ""
+  COBROWSE_KEY: ""
 };
 
 $(function () {

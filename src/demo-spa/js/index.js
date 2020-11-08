@@ -1,7 +1,7 @@
-var EXPAND_CLASS = "expanded";
-var MOBILE_MAX_WIDTH = 767; //px
+const EXPAND_CLASS = "expanded";
+const MOBILE_MAX_WIDTH = 767; //px
 
-chatServicesUrl = "";
+const config;
 
 var envVars = {
   SPA_ENV_MCAP_MAINTENANCE_FLAG: "",

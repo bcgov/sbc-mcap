@@ -1,7 +1,6 @@
 # MCAP Single Page Demo App (src/demo-spa)
 
-This sub-project is a Single Page Application (SPA) "Contact Us" page written with JQuery and Bootstrap to demonstrate a full user experience page.  It displays functions that are the core of MCAP.  Many of the links on this page are just placeholders and have no real functionality.  Some familiarity with jQuery and Bootstrap is required to use and modify this SPA. In this readme we will cover how to setup your local environment to edit and run this SPA.  The page will be available at the following local url:<br>
-http://localhost:8080/<br>
+This sub-project is a Single Page Application (SPA) "Contact Us" page written with JQuery and Bootstrap to demonstrate a full user experience page.  It displays functions that are the core of MCAP.  Many of the links on this page are just placeholders and have no real functionality.  Some familiarity with jQuery and Bootstrap is required to use and modify this SPA. In this readme we will cover how to setup your local environment to edit and run this SPA.  
 
 This example page requires familiarity with web page development including html, css and javascript.  This application also makes extensive use of the JQuery javascript library Bootstrap CSS.  You do not need to be an expert in Bootstrap but you should have JQuery experience to understand what it's doing.
 
@@ -15,7 +14,7 @@ To install this project on your local development environment simple perform the
 - Run the node app that serves the static pages `#node server.js`
 
 *Note: 
-A page with a CoBrowse function MUST be available on the internet to function correctly. If you try to access a cobrowse page on localhost it will not function.  For development purposes you will need to use a proxy such as "ngrok" or "localtunnel" to obtain a temporary public url in order to test the code.  Fortunately this is very easy and both of these are node modules that can be installed using npm or yarn.  For detailed instructons on this refer to the README in the cobrowse example app of this project
+To access thge CoBrowse function the page MUST be available on the internet to function correctly. If you try to access a cobrowse page on localhost it will not function.  For development purposes you should use a proxy server such as "ngrok" or "localtunnel" to obtain a temporary public url in order to test the code.  Fortunately this is very easy and both are node modules that can be installed using npm or yarn.  For detailed instructons on this refer to the README in the cobrowse example app of this project
 
 ## Web Server node Application
 `server.js` is a small node.js web server application that serves the static files of the SPA demo application.  This aplication serves the demo static pages and exposes a single web service endpoint `/api/env` which the page accesses one time, on startup

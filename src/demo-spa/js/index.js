@@ -1,7 +1,7 @@
 const EXPAND_CLASS = "expanded";
 const MOBILE_MAX_WIDTH = 767; //px
 
-const config;
+let config = {};
 
 var envVars = {
   SPA_ENV_MCAP_MAINTENANCE_FLAG: "",
@@ -13,11 +13,18 @@ $(function () {
   // Hide maintenance section on start
   $("div#maintenance").hide();
 
-  // console.log('ChatServicesUrl=' + chatServicesUrl);
+  // Fetch config
+  $.get("/api/env", function (data) {
+    // console.log(data);
+    config = data;
+    // $(".result").html(data);
 
-  if (chatServicesUrl) {
-    $(".chatpopup").attr("action", chatServicesUrl);
-  }
+    console.log(config);
+    if (config.WEBCHAT_URL) {
+      $(".chatpopup").attr("action", config.SPA_ENV_MCAP_CHAT_SERVICES_URL);
+    }
+  });
+
   $("#main-content .collapse").on("show.bs.collapse", onExpandSection);
 
   // Close collapsible sections when clicking outside.
@@ -30,15 +37,10 @@ $(function () {
     console.log("dropdown body clicked");
     e.stopPropagation();
 
-    //Don't stop event if it's form  fission
+    // Don't stop event if it's form  fission
     if (e.target.type === "submit") return true;
     if (e.target.href) return true;
     return false;
-  });
-
-  $.get("/api/env", function (data) {
-    console.log(data);
-    // $(".result").html(data);
   });
 
 });

@@ -11,24 +11,26 @@ $(function () {
   // Hide maintenance section on start
   $("div#maintenance").hide();
 
-  // Fetch config
-  $.get("/api/env", function (data) {
+  // Fetch config from back end
+  const request = $.get("/api/env");
+  request.done(function (data) {
     config = { ...config, ...data };
     console.log(config);
     if (config.WEBCHAT_URL) {
-      $(".chatpopup").attr("action", config.SPA_ENV_MCAP_CHAT_SERVICES_URL);
+      $(".chatpopup").attr("action", config.WEBCHAT_URL);
     }
+
+    // initialize coBrowse after config is fetched
     initCoBrowse();
   });
+  request.fail(e => console.log(e, e.status, e.statusText));
 
   $("#cobrowse_start").on("click", startCoBrowse);
-
   $("#main-content .collapse").on("show.bs.collapse", expandSection);
 
   // Close collapsible sections when clicking outside.
   $("body").on("click", function () {
     $("#main-content .collapse.in").collapse("hide");
-    console.log("collapse");
   });
 
   $("#main-content .collapse").on("click", function (e) {

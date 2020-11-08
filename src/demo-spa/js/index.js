@@ -35,6 +35,12 @@ $(function () {
     if (e.target.href) return true;
     return false;
   });
+
+  $.get("/api/env", function (data) {
+    console.log(data);
+    // $(".result").html(data);
+  });
+
 });
 
 function readEnvironment() {
@@ -42,13 +48,6 @@ function readEnvironment() {
 
   var request = $.ajax({
     type: "POST",
-    beforeSend: function (request) {
-      request.setRequestHeader(
-        "Authorization",
-        serverConfig.authorizationToken
-      );
-      request.setRequestHeader("SPA_ENV_NAME", JSON.stringify(envVars));
-    },
     url: serverConfig.spaEnvServerURL,
     processData: false,
   });

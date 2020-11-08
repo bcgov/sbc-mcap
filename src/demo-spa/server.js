@@ -31,7 +31,7 @@ console.log(__dirname + '/../examples/webchat');
 
 // Read the required items from environment. OS env overrides .env file
 const configObj = {
-  cobrowse_url: process.env.COBROWSE_URL,
+  cobrowse_url: cobrowse_url,
   webchat_url: process.env.CHAT_SERVICES_URL,
   spaenv_url: process.env.SPA_ENV_SERVER_URL,
   agentId: process.env.AGENT_ID,
@@ -40,6 +40,8 @@ const configObj = {
 
 // used to send test/prod specific config to client
 app.get('/api/env', function (req, res) {
+  const result = { cobrowse_url: cobrowse_url };
+  res.type('json');
   res.end(JSON.stringify(configObj));
 });
 

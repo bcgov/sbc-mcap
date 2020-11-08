@@ -29,7 +29,15 @@ The following environment variables are required by the Demo application:
 The demo application uses the `dotenv` node module to read these items from an optional `.env` file if they are not present in the OS environment.  You can also setup a launch config in your Visual Studio Code IDE to set these environment variables at launch.
 
 ## Running the SPA Demo page
-Once you have the static pages available, either through the development node application or on your own web server, browse to the url of the SPA Demo page.  For a localhost setup the url will be http://localhost:8080  or the url provided by your proxy if testing cobrowse features
+Once you have the static pages available, either through the development node application or on your own web server, browse to the url of the SPA Demo page.  For a localhost setup the url will be http://localhost:8080  or the url provided by your proxy if testing cobrowse features.
+
+These are instructions for running the Demo application using localtunnel
+
+- Install localtunnel or similar proxy.  `npm i -g localtunnel`
+- Start the demo app.  `npm start`
+- Start localtunnel in another terminal window.  `lt --port 8080`<br>
+(note you can optionally choose your own subdomain with the `-s` option)
+- Browse to the url provided by the proxy (you may get a localtunnel splash screen first)
 
 <i>Please note the code contained in this project is example code only. This code can be used as a starting point for a developing your own production application but is not intended or expected to be 
 interpreted as a supported or finished project. </i>

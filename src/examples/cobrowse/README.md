@@ -15,5 +15,5 @@ A web page with a CoBrowse function MUST be available on the internet to functio
 
 If you clicked on the button and nothing happened there is a good chance that you are not using a public url to access this page.  See the node above regarding using a public proxy
 
-The file `index.html` is the `"hello world"` equivalent of a CoBrowse.  It contains the bare minimum to start a CoBrowse session.  In this file is a single button with a `onClick` handler which will start a CoBrowse session. The asociated `index.js` file is loaded by `index.html` and handles initialization of CoBrowse. 
+The file `index.html` is the `"hello world"` equivalent of a CoBrowse.  It contains the bare minimum to start a CoBrowse session.  In this file is a single button with a `onClick` handler which will start a CoBrowse session. An optional floating "Get Live Help" button is also displayed.  The asociated `index.js` file is loaded by `index.html` and handles initialization of CoBrowse. 
 

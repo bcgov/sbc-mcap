@@ -544,23 +544,11 @@
               </div>
 
               <div class="collapse" id="collapseCoBrowse">
-                <div class="well">
-                  <form target="print_popup" onsubmit="window.open('about:blank','print_popup','width=400,height=400');"
-                    method="post" class="form-horizontal chatpopup">
-                    <div class="form-group hidden">
-                      <label class="col-sm-2 control-label">Reason</label>
-                      <div class="col-sm-8">
-                        <input type="text" id="Reason" name="Reason" class="form-control" value="SBC_WebChat" />
-                      </div>
-                    </div>
-
-                    <input type="hidden" name="UserLanguage" value="en" />
-                    <input type="hidden" name="Parameters[TimeZoneOffset]" value="8" />
-                    <button type="submit" class="btn btn-primary btn-block btn-lg">
-                      <i class="fa fa-check" aria-hidden="true"></i>
-                      Start CoBrowse
-                    </button>
-                  </form>
+                <div class="well" id="123">
+                  <button type="button" class="btn btn-primary btn-block btn-lg" id="cobrowse_start">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                    Start CoBrowse
+                  </button>
                 </div>
               </div>
             </div>

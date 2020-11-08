@@ -1,12 +1,10 @@
 const EXPAND_CLASS = "expanded";
 const MOBILE_MAX_WIDTH = 767; //px
 
-let config = {};
-
-var envVars = {
-  SPA_ENV_MCAP_MAINTENANCE_FLAG: "",
-  SPA_ENV_MCAP_MAINTENANCE_MESSAGE: "",
-  SPA_ENV_MCAP_CHAT_SERVICES_URL: ""
+var config = {
+  WEBCHAT_URL: "",
+  COBROWSE_URL: "",
+  COBROWSE_TOKEN: ""
 };
 
 $(function () {
@@ -15,10 +13,7 @@ $(function () {
 
   // Fetch config
   $.get("/api/env", function (data) {
-    // console.log(data);
-    config = data;
-    // $(".result").html(data);
-
+    config = {...config, ...data};
     console.log(config);
     if (config.WEBCHAT_URL) {
       $(".chatpopup").attr("action", config.SPA_ENV_MCAP_CHAT_SERVICES_URL);

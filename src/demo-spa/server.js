@@ -16,7 +16,7 @@ const SPA_ENV_AUTH = process.env.SPA_ENV_AUTH;
 let envConfig = {
   COBROWSE_URL: process.env.COBROWSE_URL,
   WEBCHAT_URL: process.env.WEBCHAT_URL,
-  COBROWSE_TOKEN: process.env.COBROWSE_TOKEN
+  COBROWSE_KEY: process.env.COBROWSE_KEY
 };
 
 // These directories just serve static file

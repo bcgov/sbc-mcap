@@ -11,6 +11,7 @@ A web page with a CoBrowse function MUST be available on the internet to functio
 - Start localtunnel.  `lt --port <http server port>`
 - browse to the url provided by the proxy
 - Click on the "Start a Session" button or the floating "Get Live Help" icon
+- You should see a dialog with a "Support PIN".  The session is now avaiable
 
 If you clicked on the button and nothing happened there is a good chance that you are not using a public url to access this page.  See the node above regarding using a public proxy
 

@@ -73,10 +73,10 @@ const initCoBrowse = function () {
     if (initResult.success) {
       // API calls can now be made!
       if (!Surfly.isInsideSession) {
-        Surfly.button();
+        // Surfly.button();   // Show floating cobrowse button
       }
     } else {
-      console.log("Surfly was unable to initialize properly.");
+      console.log("CoBrowse was unable to initialize");
     }
   });
 

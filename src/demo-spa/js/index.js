@@ -95,9 +95,7 @@ function scrollTo($el, scrollTime) {
 }
 
 function expandSection() {
-
-  console.log($(this).attr('id'));
-
+  // console.log($(this).attr('id'));
   // console.log($(this).children());
 
   //1. Make sure it's full-width (for desktop breakpoints)

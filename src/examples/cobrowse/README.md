@@ -1,34 +1,18 @@
 ## CoBrowse Simple Example Page
 
 This is a basic single file example for how to open a CoBrowse session.
-You can run this from any http server or even as a local file directly from your browser. 
 
-To use:
-1. Open index.html with your browser
-2. Click the "Start CoBrowse" icon
-
-The file `index.html` is the `"hello world"` equivalent of a CoBrowse.  It contains the bare minimum to open up a CoBrowse dialog in a 'popup' frame.  In this file is a single button with a jQuery `click` listener to which will bring up the CoBrowse dialog. This dialog is identical to that displayed in the SPA Demo page and is built into the example SDK.  The asociated `index.js` file is loaded by `index.html` and handles initialization of CoBrowse as well as the `click` handler on the button. 
-
-Clicking the button in this example simply makes the CoBrowse dialog visible with the following line:<br>
-`$("#assist-modal-help").modal("show");`
-
-## CoBrowse SDK
-The following two files make up the CoBrowse  SDK. These files are included in this project and you can edit and experiment with them to change things like the dialog text, etc.
-  - assist-support.js  
-  - short-code-assist.js
-
-These files in turn have several remote dependancies. These are included in `index.html`. 
+*Note: 
+A web page with a CoBrowse function MUST be available on the internet to function correctly. If you try to run or test a cobrowse page on localhost it will not function.  For development purpose you will have to use something like "ngrok" or "localtunnel" to obtain a temporary public url in order to test and run the code.  Fortunately this is very easy and both of these are node modules that can be installed using npm or yarn.
 
 ## Running the CoBrowse Demo page
+- install localtunnel or similar proxy.  `npm i -g localtunnel`
+- Start any http server to serve the page.   `npx http-server`
+- Start localtunnel.  `lt --port <http server port>`
+- browse to the url provided by the proxy
+- Click on the "Start a Session" button or the floating "Get Live Help" icon
 
-You can  open the CoBrowse example page from within the node.js mini web server application included with the SPA Demo page.  Simply start that node app and navigate to: http://localhost:8080/assist/ 
+If you clicked on the button and nothing happened there is a good chance that you are not using a public url to access this page.  See the node above regarding using a public proxy
 
-Note, depending on the time of day and other factors, the Video Chat window may not open immediately. It may take a couple of tries for it to respond.
+The file `index.html` is the `"hello world"` equivalent of a CoBrowse.  It contains the bare minimum to open up a CoBrowse dialog in a 'popup' frame.  In this file is a single button with a `onClick` handler which will start a CoBrowse session. The asociated `index.js` file is loaded by `index.html` and handles initialization of CoBrowse. 
 
-## Start Assistance Button
-
-The Start Assistance button on this example page is attached to a jQuery click handler in the jQuery startup function in main.js.  All the click handler does is make the CoBrowse dialog visible so the user can select Video Chat or Co-Browse
-
-## Read Remote Env Button
-
-The Read Remote Environment button on this example page is attached to a jQuery click handler in the jQuery startup function in main.js.  This click handler fetches the current values of the environment variables from the Remote Environment Server. These are the same environment variables that are needed to initialize Web Chat and CoBrowse which means, given the env server url and its auth token, you can retrieve everything else you need from the remote environment server.  This is what the Assist SDK does on startup.  This environmemt server also reports if the webchat and CoBrowse services are currently open or "after hours  (SPA_ENV_MCAP_MAINTENANCE_FLAG)

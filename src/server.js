@@ -7,7 +7,7 @@ the client to fetch the urls & tokens for webchat and cobrowse
 =============================================================================*/
 const app = express();
 
-// Read the required items from environment. OS env overrides .env file
+// Read the required items from environment. OS env overrides .env
 const SERVICE_PORT = process.env.SERVICE_PORT || 8080;
 // const SPA_ENV_URL = process.env.SPA_ENV_URL;
 // const SPA_ENV_AUTH = process.env.SPA_ENV_AUTH;

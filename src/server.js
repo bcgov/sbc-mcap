@@ -2,7 +2,7 @@ const express = require("express");
 require("dotenv").config({ path: `${__dirname}/.env` });
 /*=============================================================================
 MCAP Single Page Demo App
-This server serves the demo index.html and provides an /api/env endpoint for
+This server serves the demo static files and provides an /api/env endpoint for
 the client to fetch the urls & tokens for webchat and cobrowse
 =============================================================================*/
 const app = express();

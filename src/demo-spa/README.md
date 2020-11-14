@@ -8,13 +8,13 @@ This example page requires familiarity with web page development including html,
 To install this project on your local development environment simple perform the following steps:
 - Ensure you have node.js installed. v12.x or higher is best
 - Clone the MCAP project
-- From the terminal change to the SPA directory: `#cd sbc-mcap/src/demo-spa`
+- From the terminal change to the project directory: `#cd sbc-mcap`
 - Install the required node modules `#npm install`
 - Ensure you have the required enviroment variables set (see below)
-- Run the node app that serves the static pages `#node server.js`
+- Run the node app that serves the static pages `#npm start`
 
 *Note: 
-To access thge CoBrowse function the page MUST be available on the internet to function correctly. If you try to access a cobrowse page on localhost it will not function.  For development purposes you should use a proxy server such as "ngrok" or "localtunnel" to obtain a temporary public url in order to test the code.  Fortunately this is very easy and both are node modules that can be installed using npm or yarn.  For detailed instructons on this refer to the README in the cobrowse example app of this project
+To access the CoBrowse function the page MUST be available on the internet to function correctly. If you try to access a cobrowse page on localhost it will not function.  For development purposes you should use a proxy server such as "ngrok" or "localtunnel" to obtain a temporary public url in order to test the code.  Fortunately this is very easy and both are node modules that can be installed using npm or yarn.  For detailed instructons on this refer to the README in the cobrowse example app of this project
 
 ## Web Server node Application
 `server.js` is a small node.js web server application that serves the static files of the SPA demo application.  This aplication serves the demo static pages and exposes a single web service endpoint `/api/env` which the page accesses one time, on startup

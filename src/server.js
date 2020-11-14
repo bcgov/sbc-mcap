@@ -18,9 +18,8 @@ let envConfig = {
   WEBCHAT_URL: process.env.WEBCHAT_URL,
 };
 
-console.log("pwd: ", __dirname);
-console.log("pwd: ", process.cwd());
-
+console.log("app dir: ", __dirname);
+console.log("node dir: ", process.cwd());
 console.log(envConfig);
 
 // These directories just serve static file
@@ -37,11 +36,6 @@ app.use("/cobrowse", express.static(`${__dirname}/examples/cobrowse`));
 app.get("/api/env", function (req, res) {
   res.type("json");
   res.end(JSON.stringify(envConfig));
-});
-
-// send web page to client
-app.get("/", function (req, res) {
-  res.sendFile("/index.html");
 });
 
 app.listen(SERVICE_PORT);

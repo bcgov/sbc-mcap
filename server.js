@@ -19,14 +19,14 @@ let envConfig = {
 };
 
 // These directories just serve static file
-app.use("/", express.static(__dirname + '/'));
-app.use("/js", express.static(__dirname + '/js'));
-app.use("/css", express.static(__dirname + '/css'));
-app.use("/fonts", express.static(__dirname + '/fonts'));
-app.use("/icons", express.static(__dirname + '/icons'));
-app.use("/images", express.static(__dirname + '/images'));
-app.use("/webchat", express.static(__dirname + '/../examples/webchat'));
-app.use("/cobrowse", express.static(__dirname + '/../examples/cobrowse'));
+app.use("/", express.static(__dirname + '/src/demo-spa'));
+app.use("/js", express.static(__dirname + '/src/demo-spa/js'));
+app.use("/css", express.static(__dirname + '/src/demo-spa/css'));
+app.use("/fonts", express.static(__dirname + '/src/demo-spa/fonts'));
+app.use("/icons", express.static(__dirname + '/src/demo-spa/icons'));
+app.use("/images", express.static(__dirname + '/src/demo-spa/images'));
+app.use("/webchat", express.static(__dirname + '/src/examples/webchat'));
+app.use("/cobrowse", express.static(__dirname + '/src/examples/cobrowse'));
 
 // send test/prod config to client
 app.get('/api/env', function (req, res) {

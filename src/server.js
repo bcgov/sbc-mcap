@@ -18,6 +18,7 @@ let envConfig = {
   WEBCHAT_URL: process.env.WEBCHAT_URL,
 };
 
+console.log("node ver: ", process.version);
 console.log("app dir: ", __dirname);
 console.log("node dir: ", process.cwd());
 console.log(envConfig);

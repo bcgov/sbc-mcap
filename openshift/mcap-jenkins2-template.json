@@ -121,7 +121,7 @@
       "displayName": "Source Repository",
       "description": "The source repository to use for the builds.",
       "required": true,
-      "value": "https://github.com/bcgov/moh-mcap.git"
+      "value": "git@github.com:bcgov/sbc-mcap.git"
     },
     {
       "name": "GIT_REFERENCE",

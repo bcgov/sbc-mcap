@@ -102,12 +102,11 @@
                   }
                 }
               }
-	    ],
+            ],
             "dnsPolicy": "ClusterFirst",
             "restartPolicy": "Always",
-            "securityContext": {
-            },
-            "terminationGracePeriodSeconds": 30,
+            "securityContext": {},
+            "terminationGracePeriodSeconds": 30
           }
         },
         "test": false,
@@ -119,9 +118,7 @@
             "type": "ImageChange",
             "imageChangeParams": {
               "automatic": true,
-              "containerNames": [
-                "${NAME}"
-              ],
+              "containerNames": ["${NAME}"],
               "from": {
                 "kind": "ImageStreamTag",
                 "namespace": "${IMAGE_NAMESPACE}",

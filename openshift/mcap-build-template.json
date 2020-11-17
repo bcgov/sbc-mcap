@@ -25,12 +25,14 @@
         }
       },
       "spec": {
-        "runPolicy": "Parallel",
-        "completionDeadlineSeconds": 1800,
+        "runPolicy": "Serial",
         "triggers": [
           {
             "type": "ImageChange"
-          }
+          },
+	  {
+	    "type": "ConfigChange"
+	  }
         ],
         "source": {
           "type": "Git",
@@ -44,8 +46,8 @@
           "sourceStrategy": {
             "from": {
               "kind": "ImageStreamTag",
+              "name": "nodejs:10",
               "namespace": "openshift",
-              "name": "${NAME}:latest"
             }
           }
         },
@@ -63,7 +65,7 @@
   ],
   "parameters": [
     {
-      "name": "MCAP Demo",
+      "name": "NAME",
       "displayName": "Name",
       "description": "The name assigned to all of the objects defined in this template.",
       "required": true,

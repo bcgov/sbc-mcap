@@ -8,7 +8,8 @@
   l = u.createElement(r);
   y = u.getElementsByTagName(r)[0];
   l.async = 1;
-  l.src = 'https://cobrowse.maximusbc.ca/surfly.js';
+  // l.src = "https://t1cobrowse.maximusbc.ca/surfly.js";
+  l.src = "'https://cobrowse.maximusbc.ca/surfly.js'";
   y.parentNode.insertBefore(l, y);
 })(window, document, "script", "Surfly");
 

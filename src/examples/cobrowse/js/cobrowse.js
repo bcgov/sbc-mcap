@@ -14,10 +14,16 @@
 
 var settings = {
   // Surfly session options can be set here, or at the Company/Plan levels.
-  widget_key: "d37355ecd9714593bbefbcf498e58206",
+  widget_key: "e6da7b3cf6c94e7a8a8a0674a0cd14f5",
   private_session: true, // to make sure only logged in agents can join the call
   require_password: false,
 };
+// var settings = {
+//   // Surfly session options can be set here, or at the Company/Plan levels.
+//   widget_key: "d37355ecd9714593bbefbcf498e58206",
+//   private_session: true, // to make sure only logged in agents can join the call
+//   require_password: false,
+// };
 
 Surfly.init(settings, function (initResult) {
   if (initResult.success) {

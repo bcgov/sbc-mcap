@@ -2,15 +2,21 @@ $(document).ready(() => {
   $("#statusButton").on("click", showStatus);
 });
 
+const BASEURL = "https://mcap-schedule-3a0694-test.apps.silver.devops.gov.bc.ca/api/status/";
+const BASELOCAL = "http://localhost:8080/api/status/";
+
 const showStatus = function () {
-  const url =
-    "https://mcap-schedule-3a0694-test.apps.silver.devops.gov.bc.ca/api/status/SBC_WebChat";
+  const code = $("#code").val();
+  const url = BASELOCAL + code;
+
+  console.log(url);
 
   $.ajax({
-    url: url,
+    url,
     dataType: "json",
     success: function (result) {
-      alert("Data Loaded: " + result);
+      console.log(result);
+      $("#statusText").html(result.status);
     },
   });
 };

@@ -4,26 +4,21 @@ html {
   padding:1em;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 28em;
+.status {
+  padding: .2em;
+  margin: .2em;
+  width:  10em;
 }
 
-li {
-  background-color: #eee;
-  color: #888;
-  border: 1px solid #888;
-  margin: 0.2em;
-  padding: 0.4em;
+.statusText {
+  background-color: lightgray;
 }
 
 input {
-  width: 5em;
-  height: 1em;
-  font-size: 0.7em;
+  width: 8em;
+  font-size: .8em;
 }
+
 button {
   height: 1.7em;
   font-size: 0.7em;

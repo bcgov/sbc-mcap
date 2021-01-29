@@ -17,16 +17,16 @@ You can run all these application locally on your computer. Instructions for doi
 
 All of the example pages contained herein require familiarity with web page development including html, css and javascript.  Familiarity with the JQuery javascript library would be very useful as well as some minimal understanding of Bootstrap CSS, although that is not as important unless you want to modify the look and feel of the underlying controls.
 
-#### MCAP Single Page Demo App (src/demo-spa)
+### MCAP Single Page Demo App (src/demo-spa)
   This is a Single Page Application (SPA) "Contact Us" page written with JQuery and Bootstrap to demonstrate a full user experience page.  It contains links to the 3 functions that are the core of MCAP.  Many of the links on this page are just placeholders and have no real functions.  Some familiarity with jQuery and Bootstrap is required to use and modify this SPA.
 
-  #### Simple html-based examples (src/examples)
-  There are two simplified example applications:
+### Simple html-based examples (src/examples)
+  There are 3 simplified example applications:
   - Web Chat
-  - CoBrowse (currently under development)
+  - CoBrowse
+  - Schedule (hours of operation)
 
-Both of these example sub-projects contain the minimal html/css/javascript required to implement each of the MCAP functions they demonstrate.  These examples do not require node.js or any other infrastructure to run.  They can be run directly from a browser or placed on any web server and used directly.  For more information please refer to the `README.MD` in each sub-project.
-
+These example sub-projects contain the minimal html/css/javascript required to implement each of the MCAP functions they demonstrate.  These examples do not require node.js or any other infrastructure to run.  They can be run directly from a browser or placed on any web server and used directly.  For more information please refer to the `README.MD` in each sub-project.
 
 Please note the code contained herein is example code only. This code can be used as a starting 
 point for developing your own production application but is not intended or expected to be 

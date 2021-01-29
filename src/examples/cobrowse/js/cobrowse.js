@@ -13,7 +13,7 @@
   y.parentNode.insertBefore(l, y);
 })(window, document, "script", "Surfly");
 
-var settings = {
+const settings = {
   // Surfly session options can be set here, or at the Company/Plan levels.
   widget_key: "e6da7b3cf6c94e7a8a8a0674a0cd14f5",
   private_session: true, // to make sure only logged in agents can join the call

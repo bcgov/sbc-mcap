@@ -4,7 +4,7 @@ $(document).ready(() => {
 
 const BASEURL =
   "https://mcap-schedule-3a0694-test.apps.silver.devops.gov.bc.ca/api/status/";
-const BASELOCAL = "http://localhost:8080/api/status/";
+const BASELOCAL = "http://localhost:8080/api/status/";  // for development purposes only
 
 const showStatus = function () {
   const code = $("#code").val();

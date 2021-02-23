@@ -4,6 +4,8 @@ This sub-project is a Single Page Application (SPA) "Contact Us" page written wi
 
 This example page requires familiarity with web page development including html, css and javascript.  This application also makes extensive use of the JQuery javascript library Bootstrap CSS.  You do not need to be an expert in Bootstrap but you should have JQuery experience to understand what it's doing.
 
+This SPA Demo Page was developed to showcase the MCAP functions but is not intended to be used as an example of a production site.  Developers who wish to incorporate these  functions into their own applications should refer to the src/examples directory.
+
 ## Installing the Project Locally
 To install this project on your local development environment simple perform the following steps:
 - Ensure you have node.js installed. v12.x or higher is best

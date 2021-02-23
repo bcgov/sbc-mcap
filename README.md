@@ -4,7 +4,7 @@
 
 In order to setup Web Chat or Live Assist (Video Chat and Co-Browse), the following information is required from Service BC:
 - Agent Skill / Reason Code - This is a dedicated queue assigned by Service BC for the purpose of replicating the functionalites of Web Chat and Live Assist.
-- MCAP URL - This is a URL (depending on the environment required - Test or Production) that is required in the form template in order to gain access to Web Chat or Live Assist. This URL will be provided by SBC when required. In order to use this service, please contact Service BC at [email-TBD]
+- MCAP URL - This is a URL (depending on the environment required - Test or Production) that is required in the form template in order to gain access to Web Chat or Live Assist. This URL will be provided by SBC when required. In order to use this service, please contact Service BC at SBCContactCentreInfo@gov.bc.ca
 
 ### MCAP Multi-Channel Contact Centre Functions
 

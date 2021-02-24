@@ -4,8 +4,8 @@
   const URL = "https://mcap-schedule-3a0694-test.apps.silver.devops.gov.bc.ca/api/status/SBC_WebChat";
 
   axios.get(URL)
-    .then(response => {
-      const schedule = response.data;
+    .then(res => {
+      const schedule = res.data;
       // console.log(`status`, schedule);
       const closed = schedule.status === "closed";
 

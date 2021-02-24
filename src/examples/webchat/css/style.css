@@ -29,3 +29,10 @@ button {
   font-size: 0.7em;
   background-color: lightgreen;
 }
+
+div.schedule {
+  font-size: 1em;
+  width: 10em;
+  /* border: 1px solid #888; */
+  padding: 0.4em;
+}

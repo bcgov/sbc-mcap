@@ -37,7 +37,7 @@ Surfly.init(settings, function (initResult) {
   if (initResult.success) {
     // API calls can now be made!
     if (!Surfly.isInsideSession) {
-      Surfly.button();
+      Surfly.button();  // Comment this to not show the default button
     }
   } else {
     console.log("Surfly was unable to initialize properly.");

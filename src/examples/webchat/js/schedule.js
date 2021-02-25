@@ -15,7 +15,7 @@
         button.disabled = closed;
         button.innerHTML=`Start WebChat (${closed?"Closed":"Open"})`;
       }
-      const div = document.querySelector('span');
+      const div = document.querySelector('span.schedule');
       div.innerHTML = "Service " + schedule.status;
 
     })

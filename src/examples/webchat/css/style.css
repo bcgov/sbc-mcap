@@ -28,11 +28,14 @@ button {
   height: 1.7em;
   font-size: 0.7em;
   background-color: lightgreen;
+  vertical-align: .5em;
 }
 
-div.schedule {
+span.schedule {
   font-size: 1em;
   width: 10em;
   /* border: 1px solid #888; */
   padding: 0.4em;
+  height: 18px;
+  vertical-align: .5em;
 }

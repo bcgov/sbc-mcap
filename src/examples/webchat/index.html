@@ -11,14 +11,14 @@
 <body>
   <h3>WebChat Example </h3>
 
-  <div class='schedule'></div>
+  <span class='schedule'></span>
 
   <form id="webchat" target="webchat_window" method="post" action="https://testchatservices.maximusbc.ca/Home/Chat"
     onSubmit="window.open('about:blank','webchat_window','width=400,height=500');">
     <input type="hidden" id="Reason" name="Reason" class="form-control" value="SBC_WebChat" />
     <input type="hidden" name="UserLanguage" value="en" />
     <input type="hidden" name="Parameters[TimeZoneOffset]" value="8" />
-    <button class="scheduled" type="submit">Start Webchat</button>
+    <button class="scheduled" disabled type="submit">Start WebChat (Closed)</button>
   </form>
 
   <form id="webchat" target="webchat_window" method="post" action="https://testchatservices.maximusbc.ca/Home/Chat"

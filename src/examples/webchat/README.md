@@ -19,7 +19,7 @@ The file `autopost.html` is identical to `index.html` but has some added javascr
 
 The file `index-auto.html` is an example of how one might use `autopost.html`.  It is self documenting.
 
-The file `js/schedule.js` is an example of making a web service call to determine if the WebChat service is Open or Closed. It is also self documenting.  To disable the WebChat buttons if the service is closed, simply uncomment the line indicated in this file. 
+The file `js/schedule.js` is an example of making a web service call to determine if the WebChat service is Open or Closed. It is also self documenting. 
 
 ## Running the Web Chat Demo page(s)
 Since no Javascript is used in the Web Chat demo page, the easiest way to run them is to simply open them directly in your browser.  For example, from a Windows computer, double click on any of the 3 files to open.  You will be able to start a Web Chat session.

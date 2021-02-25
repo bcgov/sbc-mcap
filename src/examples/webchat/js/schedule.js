@@ -9,13 +9,15 @@
       // console.log(`status`, schedule);
       const closed = schedule.status === "closed";
 
-      const buttons = document.querySelectorAll('button');
+      // This will disable any button with class="scheduled" if closed
+      const buttons = document.querySelectorAll('button.scheduled');
       for (const button of buttons) {
-        // Uncomment this to have the buttons disabled if closed
-        // button.disabled = closed;
+        button.disabled = closed;
+        button.innerHTML=`Start WebChat (${closed?"Closed":"Open"})`;
       }
-      const div = document.querySelector('.schedule');
+      const div = document.querySelector('div.schedule');
       div.innerHTML = "Service " + schedule.status;
+
     })
     .catch(error => console.error(error));
 

@@ -25,6 +25,7 @@ const settings = {
   widget_key,
   private_session: true, // to make sure only logged in agents can join the call
   require_password: false,
+  hide_selector: '.masked',
 };
 // var settings = {
 //   // Surfly session options can be set here, or at the Company/Plan levels.

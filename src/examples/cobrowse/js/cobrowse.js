@@ -22,14 +22,14 @@ window.setTimeout(function() {
   if ( umaskContent ){
     umaskField.value = umaskContent;
   };
-  umaskField.addEventListener("change", function() {
+  umaskField.addEventListener("input", function() {
     umaskContent = umaskField.value;
     dataStore.setItem("umask", umaskContent);
   });
   if ( maskContent ){
     maskField.value = maskContent;
   };
-  maskField.addEventListener("change", function() {
+  maskField.addEventListener("input", function() {
     maskContent = maskField.value;
     dataStore.setItem("mask", maskContent);
   });
